@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+// Переменные
+$minWidth: 320px;
+$maxWidth: 1440;
+$maxWidthContainer: 1300;
+$md1: $maxWidthContainer +12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+$black:#101725;
+$green:#A1C767;
+$blue:#60BEBE;
+$grey:#F2F1F1;
+$white:#FFFFFF;
+$fontFamily:'DM Sans', sans-serif;
+
+// Переменные
+
+@import "zeroing_style";
+
+@import "header";
+
+
+._container {
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+  //background-color: #F2F1F1;
+  @media (max-width: $md1 + px) {
+    max-width: 970px;
+    //background-color: #A1C767;
+  }
+  @media (max-width: $md2 + px) {
+    max-width: 750px;
+  }
+  @media (max-width: $md3 + px) {
+    max-width: none;
+    padding: 0 10px;
+  }
+
+}
