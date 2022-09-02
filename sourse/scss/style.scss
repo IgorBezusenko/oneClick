@@ -9,12 +9,12 @@ $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
-$black:#101725;
-$green:#A1C767;
-$blue:#60BEBE;
-$grey:#F2F1F1;
-$white:#FFFFFF;
-$fontFamily:'DM Sans', sans-serif;
+$black: #101725;
+$green: #A1C767;
+$blue: #60BEBE;
+$grey: #F2F1F1;
+$white: #FFFFFF;
+$fontFamily: 'DM Sans', sans-serif;
 
 // Переменные
 
@@ -22,6 +22,9 @@ $fontFamily:'DM Sans', sans-serif;
 
 @import "header";
 
+
+
+@import "footer";
 
 ._container {
   max-width: $maxWidthContainer + px;

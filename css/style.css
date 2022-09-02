@@ -90,6 +90,11 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 767.98px) {
+  .connection {
+    background-color: #F2F1F1;
+  }
+}
 .connection:after {
   content: "";
   position: fixed;
@@ -237,6 +242,11 @@ h1, h2, h3, h4, h5, h6 {
             transform: rotate(45deg);
     bottom: calc(50% - 1px);
   }
+}
+
+.footer {
+  background-color: #101725;
+  color: #FFFFFF;
 }
 
 ._container {

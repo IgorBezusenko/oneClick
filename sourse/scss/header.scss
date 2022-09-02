@@ -12,7 +12,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  @media (max-width: $md3+px) {
+    background-color: $grey;
+  }
   &:after {
     content: "";
     position: fixed;
