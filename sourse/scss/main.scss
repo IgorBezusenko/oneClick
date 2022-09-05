@@ -1,5 +1,5 @@
 .main {
-  padding:  0 0 25px 0;
+  padding: 0 0 25px 0;
 
   @media (max-width: $md1 + px) {
     max-width: 970px;
@@ -81,7 +81,7 @@
     }
 
     &__login {
-        p {
+      p {
         font-size: 20px;
         line-height: 26px;
       }
@@ -145,6 +145,7 @@
 
     &__login {
       padding: 15px 10px;
+
       p {
         font-size: 14px;
         line-height: 22px;
@@ -156,6 +157,53 @@
         line-height: 16px;
       }
     }
+
+  }
+
+}
+
+.filters {
+  display: flex;
+
+  font-weight: 500;
+
+  &__item {
+    flex: 1 1 420px;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: $white;
+    border-radius: 5px;
+
+    margin: 0 20px 0 0;
+    padding: 28px 15px 28px 40px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__text {
+
+    p {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 26px;
+    }
+
+    span {
+      font-size: 24px;
+      line-height: 35px;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+
+  &__img {
 
   }
 

@@ -408,6 +408,43 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+}
+.filters__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 420px;
+          flex: 1 1 420px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  margin: 0 20px 0 0;
+  padding: 28px 15px 28px 40px;
+}
+.filters__item:last-child {
+  margin: 0;
+}
+.filters__text p {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 26px;
+}
+.filters__text span {
+  font-size: 24px;
+  line-height: 35px;
+}
+.filters__title {
+  font-size: 32px;
+  line-height: 42px;
+}
 .footer {
   background-color: #101725;
   color: #FFFFFF;
