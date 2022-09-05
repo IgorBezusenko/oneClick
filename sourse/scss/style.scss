@@ -26,6 +26,18 @@ $fontFamily: 'DM Sans', sans-serif;
 
 @import "footer";
 
+.wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+
+}
+
+.main {
+  flex-grow: 1;
+}
+
 ._container {
   max-width: $maxWidthContainer + px;
   margin: 0 auto;
@@ -44,8 +56,10 @@ $fontFamily: 'DM Sans', sans-serif;
 
 }
 
-.btnRadius{
+.btnRadius {
   background-color: $green;
   color: $white;
   border-radius: 5px;
+
+
 }

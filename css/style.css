@@ -76,6 +76,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+@media (max-width: 767.98px) {
+  body {
+    background-color: #FFFFFF;
+  }
+}
 .header {
   background-color: #FFFFFF;
   position: relative;
@@ -247,7 +252,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main {
-  height: calc(100% - 290px);
+  padding: 0 0 25px 0;
 }
 @media (max-width: 1312px) {
   .main {
@@ -262,7 +267,6 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 767.98px) {
   .main {
     max-width: none;
-    height: calc(100% - 420px);
     padding: 0 10px;
     background-color: #FFFFFF;
   }
@@ -275,7 +279,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 60px 0 0 0;
+  margin: 60px 0 55px 0;
   font-weight: 500;
 }
 .activeBanner__add {
@@ -368,7 +372,8 @@ h1, h2, h3, h4, h5, h6 {
   .activeBanner {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 0;
+    margin: 0 0 25px 0;
+    padding-bottom: 25px;
   }
   .activeBanner__login, .activeBanner__add {
     background-color: #F2F1F1;
@@ -530,6 +535,23 @@ h1, h2, h3, h4, h5, h6 {
         -ms-flex-order: 3;
             order: 3;
   }
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 ._container {
