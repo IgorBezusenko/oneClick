@@ -3,9 +3,6 @@
   color: $white;
   padding: 68px 75px;
 
-  &__logo {
-    //order:1;
-  }
 
   &__content {
     display: flex;
@@ -13,15 +10,31 @@
     align-items: center;
   }
 
+  &__logo {
+    //order:1;
+  }
+
   &__nav {
     display: flex;
     color: $white;
-    margin: 0 60px 0 50px;
+    margin: 0 0 0 50px;
     //order: 2;
+
+    .nav__list{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      li {
+        margin: 0 39px 0 0;
+        @media (max-width: $md2+px) {
+          //display: none;
+          margin: 0 7.5px ;
+        }
+      }
+    }
   }
 
   &__social {
-
     //order: 3;
   }
 
@@ -60,25 +73,32 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
+
+      .nav__list{
+
+        flex-direction: column;
+        align-items: flex-start;
+        li {
+          margin: 0 20px 0 0;
+
+        }
+      }
+
     }
-    .menu__list {
-      flex-direction: column;
-    }
+
   }
   @media (max-width: $md3 + px) {
-    padding: 28px 70px;
+    padding: 28px 0;
     &__content {
       flex-direction: column;
-
     }
-
 
     &__nav {
       width: 100%;
       order: 1;
     }
 
-    .menu__list {
+    .nav__list {
       li {
         margin: 0 20px 11px 0;
       }

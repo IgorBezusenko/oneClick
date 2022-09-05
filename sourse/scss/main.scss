@@ -1,0 +1,17 @@
+main{
+  height: calc(100% - 300px);
+
+  @media (max-width: $md1 + px) {
+    max-width: 970px;
+    //background-color: #A1C767;
+  }
+  @media (max-width: $md2 + px) {
+    max-width: 750px;
+
+  }
+  @media (max-width: $md3 + px) {
+    max-width: none;
+    height: calc(100% - 420px);
+    padding: 0 10px;
+  }
+}
