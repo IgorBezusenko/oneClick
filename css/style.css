@@ -78,6 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 .header {
   background-color: #FFFFFF;
+  position: relative;
 }
 .connection {
   height: 40px;
@@ -98,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .connection:after {
   content: "";
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 1px;
   top: 40px;
@@ -245,21 +246,21 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-main {
-  height: calc(100% - 300px);
+.main {
+  height: calc(100% - 290px);
 }
 @media (max-width: 1312px) {
-  main {
+  .main {
     max-width: 970px;
   }
 }
 @media (max-width: 991.98px) {
-  main {
+  .main {
     max-width: 750px;
   }
 }
 @media (max-width: 767.98px) {
-  main {
+  .main {
     max-width: none;
     height: calc(100% - 420px);
     padding: 0 10px;
@@ -335,6 +336,10 @@ main {
   margin: 0 12px 0 0;
 }
 @media (max-width: 1312px) {
+  .footer__content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
   .footer__nav {
     display: -webkit-box;
     display: -ms-flexbox;

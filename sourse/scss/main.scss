@@ -1,5 +1,5 @@
-main{
-  height: calc(100% - 300px);
+.main{
+  height: calc(100% - 290px);
 
   @media (max-width: $md1 + px) {
     max-width: 970px;
