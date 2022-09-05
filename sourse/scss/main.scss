@@ -1,4 +1,4 @@
-.main{
+.main {
   height: calc(100% - 290px);
 
   @media (max-width: $md1 + px) {
@@ -13,5 +13,149 @@
     max-width: none;
     height: calc(100% - 420px);
     padding: 0 10px;
+    background-color: $white;
   }
+}
+
+.activeBanner {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 60px 0 0 0;
+  font-weight: 500;
+
+
+  &__add {
+    flex: 1 1 46%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 0 20px 0 0;
+
+    background-color: $white;
+    border-radius: 5px;
+  }
+
+  &__text {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 32px;
+  }
+
+  &__login {
+
+    flex: 1 1 46%;
+    padding: 25px 35px;
+    background-color: $white;
+    border-radius: 5px;
+
+    p {
+      font-size: 24px;
+      line-height: 31px;
+    }
+
+    &_btn {
+      float: right;
+      padding: 5px 40px;
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+
+  @media (max-width: $md1 + px) {
+    //max-width: 970px;
+    //background-color: #A1C767;
+    &__add_img {
+      width: 120px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__text {
+      font-size: 22px;
+    }
+
+    &__login {
+        p {
+        font-size: 20px;
+        line-height: 26px;
+      }
+
+      &_btn {
+        padding: 4px 35px;
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+  }
+  @media (max-width: $md2 + px) {
+    //max-width: 750px;
+
+    &__add_img {
+      width: 80px;
+    }
+    &__text {
+      font-size: 20px;
+    }
+    &__login {
+      p {
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      &_btn {
+        padding: 4px 35px;
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+  }
+  @media (max-width: $md3 + px) {
+    //max-width: none;
+    //height: calc(100% - 420px);
+    //padding: 0 10px;
+    flex-wrap: wrap;
+    margin: 0;
+
+
+    &__login, &__add {
+      background-color: $grey;
+      flex: 1 1 100%;
+      margin: 0;
+    }
+
+    &__add {
+      margin: 0 0 20px 0;
+    }
+    &__text {
+      font-size: 18px;
+      flex-basis: 65%;
+
+      img {
+        width: 17px;
+        height: 17px;
+      }
+    }
+
+    &__login {
+      padding: 15px 10px;
+      p {
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      &_btn {
+        padding: 4px 20px;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+
+  }
+
 }

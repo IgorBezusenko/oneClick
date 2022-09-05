@@ -39,7 +39,13 @@ $fontFamily: 'DM Sans', sans-serif;
   }
   @media (max-width: $md3 + px) {
     max-width: none;
-    padding: 0 10px;
+    padding: 0 24px;
   }
 
+}
+
+.btnRadius{
+  background-color: $green;
+  color: $white;
+  border-radius: 5px;
 }

@@ -205,8 +205,8 @@ h1, h2, h3, h4, h5, h6 {
   .icon-menu {
     display: block;
     position: absolute;
-    top: 30px;
-    right: 10px;
+    top: 26px;
+    right: 26px;
     width: 14px;
     height: 12px;
     cursor: pointer;
@@ -264,6 +264,142 @@ h1, h2, h3, h4, h5, h6 {
     max-width: none;
     height: calc(100% - 420px);
     padding: 0 10px;
+    background-color: #FFFFFF;
+  }
+}
+
+.activeBanner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 60px 0 0 0;
+  font-weight: 500;
+}
+.activeBanner__add {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 46%;
+          flex: 1 1 46%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  margin: 0 20px 0 0;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+}
+.activeBanner__text {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 32px;
+}
+.activeBanner__login {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 46%;
+          flex: 1 1 46%;
+  padding: 25px 35px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+}
+.activeBanner__login p {
+  font-size: 24px;
+  line-height: 31px;
+}
+.activeBanner__login_btn {
+  float: right;
+  padding: 5px 40px;
+  font-size: 28px;
+  line-height: 40px;
+}
+@media (max-width: 1312px) {
+  .activeBanner__add_img {
+    width: 120px;
+  }
+  .activeBanner__add_img img {
+    width: 100%;
+  }
+  .activeBanner__text {
+    font-size: 22px;
+  }
+  .activeBanner__login p {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .activeBanner__login_btn {
+    padding: 4px 35px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 991.98px) {
+  .activeBanner__add_img {
+    width: 80px;
+  }
+  .activeBanner__text {
+    font-size: 20px;
+  }
+  .activeBanner__login p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .activeBanner__login_btn {
+    padding: 4px 35px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .activeBanner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0;
+  }
+  .activeBanner__login, .activeBanner__add {
+    background-color: #F2F1F1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    margin: 0;
+  }
+  .activeBanner__add {
+    margin: 0 0 20px 0;
+  }
+  .activeBanner__text {
+    font-size: 18px;
+    -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
+  }
+  .activeBanner__text img {
+    width: 17px;
+    height: 17px;
+  }
+  .activeBanner__login {
+    padding: 15px 10px;
+  }
+  .activeBanner__login p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .activeBanner__login_btn {
+    padding: 4px 20px;
+    font-size: 12px;
+    line-height: 16px;
   }
 }
 
@@ -413,6 +549,12 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 767.98px) {
   ._container {
     max-width: none;
-    padding: 0 10px;
+    padding: 0 24px;
   }
+}
+
+.btnRadius {
+  background-color: #A1C767;
+  color: #FFFFFF;
+  border-radius: 5px;
 }
