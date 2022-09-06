@@ -1,0 +1,150 @@
+.filters {
+  display: flex;
+
+  font-weight: 500;
+
+  &__item {
+    flex: 1 1 30%;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: $white;
+    border-radius: 5px;
+
+    margin: 0 20px 0 0;
+    padding: 28px 20px 28px 35px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__text {
+    font-size: 32px;
+    line-height: 42px;
+
+    span {
+      font-size: 24px;
+      line-height: 26px;
+      opacity: 0.7;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    margin: 0 0 18px 0;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  &__arrow {
+    img {
+      width: 100%;
+    }
+  }
+  &__picture {
+    width: 116px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $md1 + px) {
+    //max-width: 970px;
+    &__item {
+      margin: 0 16px 0 0;
+      padding: 20px;
+    }
+
+    &__text {
+      font-size: 28px;
+      line-height: 36px;
+
+      span {
+        font-size: 20px;
+      }
+    }
+
+    &__title {
+      margin: 0 0 16px 0;
+    }
+
+    &__picture {
+      width: 100px;
+    }
+  }
+  @media (max-width: $md2 + px) {
+    //max-width: 750px;
+
+    flex-wrap: wrap;
+    &__item {
+      margin: 0;
+      padding: 15px;
+    }
+    &__item1 {
+      margin-right: 16px;
+    }
+    &__item1,
+    &__item2 {
+      flex: 1 1 46%;
+      margin-bottom: 16px;
+    }
+
+    &__text {
+      font-size: 28px;
+      line-height: 36px;
+
+      span {
+        font-size: 20px;
+      }
+    }
+
+    &__title {
+      margin: 0 0 16px 0;
+    }
+
+    &__picture {
+      width: 80px;
+    }
+  }
+  @media (max-width: $md3 + px) {
+    //max-width: none;
+    &__item {
+      background-color: $grey;
+      padding: 10px 16px 10px 10px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 21px;
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    &__title {
+      margin: 0 0 18px 0;
+    }
+    &__arrow {
+      width: 16px;
+    }
+    &__picture {
+      width: 46px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    &__item {
+      padding: 10px;
+    }
+    &__picture {
+      width: 36px;
+    }
+  }
+}
