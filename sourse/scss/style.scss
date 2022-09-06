@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 // Переменные
 $minWidth: 320px;
 $maxWidth: 1440;
 $maxWidthContainer: 1300;
-$md1: $maxWidthContainer +12;
+$md1: $maxWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
 $black: #101725;
-$green: #A1C767;
-$blue: #60BEBE;
-$grey: #F2F1F1;
-$white: #FFFFFF;
-$fontFamily: 'DM Sans', sans-serif;
+$green: #a1c767;
+$blue: #60bebe;
+$grey: #f2f1f1;
+$white: #ffffff;
+$fontFamily: "DM Sans", sans-serif;
 
 // Переменные
 
@@ -30,8 +30,6 @@ $fontFamily: 'DM Sans', sans-serif;
   display: flex;
   height: 100%;
   flex-direction: column;
-
-
 }
 
 .main {
@@ -53,13 +51,54 @@ $fontFamily: 'DM Sans', sans-serif;
     max-width: none;
     padding: 0 24px;
   }
-
 }
 
 .btnRadius {
   background-color: $green;
   color: $white;
   border-radius: 5px;
+}
 
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  @media (max-width: $md1 + px) {
+    font-size: 22px;
+    line-height: 29px;
+  }
+  @media (max-width: $md2 + px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  @media (max-width: $md3 + px) {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
 
+.btn-link {
+  background-color: $white;
+  color: $green;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  border: 2px solid $green;
+  @media (min-width: $md2+px) {
+    &:hover {
+      background-color: $green;
+      color: $white;
+    }
+    &:focus {
+      background-color: $black;
+      color: $white;
+      border: 2px solid $black;
+    }
+  }
+  @media (max-width: $md3 + px) {
+    padding: 7px 10px;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
