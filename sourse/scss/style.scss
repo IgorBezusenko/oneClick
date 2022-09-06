@@ -78,27 +78,49 @@ $fontFamily: "DM Sans", sans-serif;
 }
 
 .btn-link {
-  background-color: $white;
-  color: $green;
   padding: 8px 12px;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
-  border: 2px solid $green;
-  @media (min-width: $md2+px) {
-    &:hover {
-      background-color: $green;
-      color: $white;
-    }
-    &:focus {
-      background-color: $black;
-      color: $white;
-      border: 2px solid $black;
-    }
-  }
+
   @media (max-width: $md3 + px) {
     padding: 7px 10px;
     font-size: 12px;
     line-height: 16px;
   }
 }
+
+.btn-primary {
+  background-color: inherit;
+  color: $green;
+  border: 2px solid $green;
+  @media (min-width: $md2+px) {
+    &:hover {
+      background-color: $green;
+      color: $white;
+    }
+  }
+}
+
+.btn-dark {
+  background-color: inherit;
+  color: $black;
+  border: 2px solid $black;
+  @media (min-width: $md2+px) {
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}
+
+//
+//@media (max-width: $md1 + px) {
+//
+//}
+//@media (max-width: $md2 + px) {
+//
+//}
+//@media (max-width: $md3 + px) {
+//
+//}

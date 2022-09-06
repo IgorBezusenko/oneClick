@@ -12,6 +12,9 @@
   //  padding: 0 10px;
   //  background-color: $white;
   //}
+  @media (max-width: $md3 + px) {
+    background-color: $white;
+  }
 }
 
 .activeBanner {
@@ -341,7 +344,9 @@
   &__list {
     max-width: fit-content;
     height: 210px;
-    overflow-y: auto;
+
+    overflow-y: hidden;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -364,21 +369,88 @@
     }
   }
 
-  //@media (max-width: $md1 + px) {
-  //}
   @media (max-width: $md2 + px) {
     margin: 35px 0 0 0;
   }
   @media (max-width: $md3 + px) {
     max-width: calc(100vw - 48px);
     padding: 0;
-    //overflow-y: auto;
-    //&__list {
-    //  display: none;
-    //}
-    //margin: 25px 0 0 0;
-    //&__header {
-    //  margin: 0 0 15px 0;
-    //}
+
+    margin: 25px 0 0 0;
+    &__header {
+      margin: 0 0 15px 0;
+    }
+  }
+}
+
+.newBuildBanner {
+  height: 360px;
+  background-color: $green;
+  background-image: url("../../img/main/new-home.png"),
+    url("../../img/main/new-home-bg.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  border-radius: 5px;
+  margin: 50px 0 0 0;
+  padding: 50px 110px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 75px;
+    span {
+      font-size: 130px;
+      line-height: 135px;
+    }
+  }
+
+  &__btn {
+    width: 135px;
+    background-color: inherit;
+    margin-top: 25px;
+  }
+
+  @media (max-width: $md1 + px) {
+  }
+  @media (max-width: $md2 + px) {
+    padding: 40px 90px;
+
+    &__title {
+      font-size: 50px;
+      line-height: 55px;
+      span {
+        font-size: 100px;
+        line-height: 105px;
+      }
+    }
+
+    &__btn {
+      width: 115px;
+      background-color: inherit;
+      margin-top: 20px;
+    }
+  }
+  @media (max-width: $md3 + px) {
+    height: 200px;
+    background-image: url("../../img/main/new-home-mobile.png"),
+      url("../../img/main/new-home-bg-mobile.png");
+    margin: 25px 0 0 0;
+    padding: 30px;
+
+    &__title {
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 36px;
+      span {
+        font-size: 55px;
+        line-height: 56px;
+      }
+    }
+
+    &__btn {
+      width: 90px;
+      background-color: inherit;
+      margin-top: 15px;
+    }
   }
 }
