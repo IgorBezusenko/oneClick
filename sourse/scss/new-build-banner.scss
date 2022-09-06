@@ -1,10 +1,10 @@
 .newBuildBanner {
   height: 360px;
   background-color: $green;
-  background-image: url("../../img/main/new-home.png"),
-    url("../../img/main/new-home-bg.png");
+  background-image: url("../img/main/new-home.png"),
+    url("../img/main/new-home-bg.png");
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: right;
   border-radius: 5px;
   margin: 50px 0 0 0;
   padding: 50px 110px;
@@ -47,8 +47,8 @@
   }
   @media (max-width: $md3 + px) {
     height: 200px;
-    background-image: url("../../img/main/new-home-mobile.png"),
-      url("../../img/main/new-home-bg-mobile.png");
+    background-image: url(../../img/main/new-home-mobile.png),
+      url("../img/main/new-home-bg-mobile.png");
     margin: 25px 0 0 0;
     padding: 30px;
 
