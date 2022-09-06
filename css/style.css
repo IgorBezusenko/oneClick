@@ -677,7 +677,7 @@ h6 {
 @media (max-width: 767.98px) {
   .newBuildBanner {
     height: 200px;
-    background-image: url(../../img/main/new-home-mobile.png), url("../img/main/new-home-bg-mobile.png");
+    background-image: url("../img/main/new-home-mobile.png"), url("../img/main/new-home-bg-mobile.png");
     margin: 25px 0 0 0;
     padding: 30px;
   }
