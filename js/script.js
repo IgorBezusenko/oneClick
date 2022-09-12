@@ -5,17 +5,14 @@ $(document).ready(function () {
         dots:true,
         dotsClass:'slick-dots category-slick-dots',
         adaptiveHeight: true,
-        speed: 300,
         slidesToShow: 6,
         slidesToScroll: 6,
-        // centerMode: true,
         responsive: [
             {
                 breakpoint: 1312,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 4,
-                    infinite: true,
                     dots: true
                 }
             },    {
@@ -23,7 +20,6 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
-                    infinite: true,
                     dots: true
                 }
             },
@@ -54,7 +50,6 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
-                    infinite: true,
                     dots: true
                 }
             },    {
@@ -62,7 +57,6 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    infinite: true,
                     dots: true
                 }
             },
@@ -81,25 +75,30 @@ $(document).ready(function () {
                     slidesToScroll: 1
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
+
         ]
     });
 
-    $('.product-slider-for').slick({
+    $('.product-slider-big').slick({
+        prevArrow: `<button type="button" class="slick-prev"></button>`,
+        nextArrow: `<button type="button" class="slick-next"></button>`,
+        // dots:true,
+        // dotsClass:'slick-dots',
+        // adaptiveHeight: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
+        // asNavFor: '.product-slider-nav',
+        // centerMode: true,
+
+
     });
-    $('.product-slider-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true
-    });
+
+    // $('.product-slider-nav').slick({
+    //     slidesToShow: 3,
+    //     slidesToScroll: 1,
+    //     asNavFor: '.product-slider-big',
+    //     dots: true,
+    //     centerMode: true,
+    //     focusOnSelect: true
+    // });
 })
