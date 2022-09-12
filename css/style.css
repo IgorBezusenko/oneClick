@@ -1002,7 +1002,7 @@ h6 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  margin: 50px 0 0 0;
+  margin: 50px 0;
   font-weight: 400;
 }
 .product .category {
@@ -1125,7 +1125,7 @@ h6 {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
-    margin: 25px 0 0 0;
+    margin: 25px 0;
     font-weight: 400;
   }
   .product__description {
@@ -1190,6 +1190,7 @@ h6 {
   background-color: #ffffff;
   padding: 40px 30px;
   border-radius: 5px;
+  margin: 0 0 25px 0;
 }
 .account__info {
   display: -webkit-box;
@@ -1231,6 +1232,7 @@ h6 {
             flex: 0 0 310px;
     background-color: #ffffff;
     padding: 40px 0;
+    margin: 25px 0;
     border-radius: 5px;
   }
   .account__phone {

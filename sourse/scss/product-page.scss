@@ -6,7 +6,7 @@
   grid-template-columns: 4fr 1fr;
   grid-gap: 16px;
   align-items: start;
-margin: 50px 0 0 0;
+  margin: 50px 0;
   font-weight: 400;
 
   .category {
@@ -43,7 +43,7 @@ margin: 50px 0 0 0;
   }
 
   &__price_mobile {
-    display: none
+    display: none;
   }
 
   &__views {
@@ -87,7 +87,6 @@ margin: 50px 0 0 0;
     justify-content: space-between;
     grid-gap: 40px;
     grid-auto-columns: minmax(400px, auto);
-
   }
 
   &__description {
@@ -101,12 +100,10 @@ margin: 50px 0 0 0;
   }
 
   &__characteristic {
-
     ul {
       li {
         display: grid;
         grid-template-columns: 2fr 1fr;
-
       }
     }
   }
@@ -122,23 +119,20 @@ margin: 50px 0 0 0;
     line-height: 25px;
   }
 
-
   //
   //@media (max-width: $md1 + px) {
   //
   //}
   @media (max-width: $md2 + px) {
-
-    grid-template-columns:  1fr;
+    grid-template-columns: 1fr;
     grid-gap: 0;
     align-items: start;
-    margin: 25px 0 0 0;
+    margin: 25px 0;
     font-weight: 400;
 
     &__description {
       grid-column-start: initial;
       grid-column-end: initial;
-
     }
 
     &__right {
@@ -154,11 +148,9 @@ margin: 50px 0 0 0;
       grid-template-columns: 1fr;
       grid-gap: 20px;
       grid-auto-columns: minmax(0, auto);
-
     }
   }
   @media (max-width: $md3 + px) {
-
     flex-direction: column;
     align-items: center;
     margin: 0;
@@ -184,17 +176,15 @@ margin: 50px 0 0 0;
       font-size: 18px;
       line-height: 23px;
     }
-
   }
-
 }
-
 
 .account {
   flex: 0 0 310px;
   background-color: $white;
   padding: 40px 30px;
   border-radius: 5px;
+  margin: 0 0 25px 0;
 
   &__info {
     display: flex;
@@ -233,6 +223,7 @@ margin: 50px 0 0 0;
     flex: 0 0 310px;
     background-color: $white;
     padding: 40px 0;
+    margin: 25px 0;
     border-radius: 5px;
     &__phone {
       display: block;
