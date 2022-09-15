@@ -1,0 +1,236 @@
+.advertisement {
+  background-color: $white;
+  padding: 50px;
+  font-size: 18px;
+  line-height: 23px;
+
+  label, select {
+    cursor: pointer;
+  }
+
+  &__title {
+    font-weight: 500;
+    margin: 20px 0;
+  }
+
+  &__typeList, &__otherList {
+
+    li {
+      padding: 0 0 0 25px;
+    }
+  }
+
+  &__typeList {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__description {
+    textarea {
+      width: 100%;
+      min-width: 250px;
+      min-height: 150px;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      padding: 10px;
+    }
+  }
+
+  &__priceContent {
+    input {
+      width: 100px;
+      height: 35px;
+      padding: 0 10px;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    select {
+      width: 50px;
+      height: 35px;
+      background-color: $grey;
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 23px;
+
+    }
+  }
+
+  &__featuresList, &__address {
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  &__otherList {
+    padding: 0 50px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__addPhoto {
+    input[type="file"] {
+      display: none;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      background-color: $grey;
+      width: 180px;
+      height: 120px;
+      border-radius: 5px;
+
+      &:before {
+        position: absolute;
+        content: " ";
+        width: 50px;
+        height: 37.5px;
+        background-image: url("../img/add-product/photo.svg");
+        background-repeat: no-repeat;
+        top: 35%;
+        left: 35%;
+      }
+
+      &:after {
+        position: absolute;
+        content: " ";
+        width: 20px;
+        height: 20px;
+        background-image: url("../img/add-product/plus-green.svg");
+        background-repeat: no-repeat;
+        bottom: -5px;
+        right: -5px;
+      }
+    }
+  }
+
+  &__contactGrid {
+    display: grid;
+    justify-content: left;
+    grid-template-columns: 220px 100px;
+    gap: 4px;
+  }
+
+  &__btn-add {
+
+    padding: 6px 12px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  &__license {
+    margin: 30px 0;
+    padding: 0 0 0 20px;
+  }
+
+  &__btn {
+
+    padding: 14px 16px;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  input[type="radio"], input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    position: relative;
+    cursor: pointer;
+  }
+
+  input[type="radio"]:after, input[type="checkbox"]:after {
+    background-color: inherit;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    position: absolute;
+    content: "";
+    display: block;
+    left: -20px;
+    top: -14px;
+    width: 15px;
+    height: 15px;
+  }
+
+  input[type="radio"]:checked:after, input[type="checkbox"]:checked:after {
+    background-color: $green;
+    border: none;
+  }
+
+
+  //
+  //@media (max-width: $md1 + px) {
+  //
+  //}
+  @media (max-width: $md2 + px) {
+
+    &__otherList, &__address {
+      padding: 0;
+      gap: 15px;
+    }
+
+  }
+  @media (max-width: $md3 + px) {
+    padding: 0 0 20px 0;
+
+    &__title {
+      font-weight: 700;
+    }
+
+    &__featuresList, &__address {
+      padding: 0;
+      display: block;
+    }
+    &__address {
+      margin-top: 20px;
+    }
+
+
+    &__otherList {
+      padding: 0;
+      height: auto;
+    }
+
+    &__contactGrid {
+      grid-template-columns: 1fr 100px;
+    }
+
+    &__license {
+      margin: 20px 0;
+      padding: 0 0 0 20px;
+    }
+
+    &__btn {
+      width: 100%;
+
+    }
+
+  }
+  @media (max-width: 374px) {
+    &__typeList {
+      font-size: 15px;
+
+      input[type="radio"]:after, input[type="checkbox"]:after {
+        left: -15px;
+        top: -14px;
+      }
+
+      li {
+        padding: 0 0 0 15px;
+      }
+    }
+
+
+  }
+
+
+}

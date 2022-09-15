@@ -1,7 +1,7 @@
 .newProducts {
   border-radius: 5px;
   padding: 29px 0;
-  margin: 50px 0 0 0;
+  //margin: 50px 0 0 0;
 
   &__header {
     display: flex;
@@ -64,7 +64,7 @@
   //}
   @media (max-width: $md3 + px) {
     padding: 0 0 20px 0;
-    margin: 25px 0 0 0;
+    //margin: 25px 0 0 0;
 
     &__item {
       margin: 0 10px 0 0;
