@@ -8,10 +8,10 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="./css/style.css"/>
-    <title>Calculator Page</title>
+    <title>Buy Page</title>
 </head>
 <body>
-<div class="wrapper ">
+<div class="wrapper buy-page">
     <header class="header">
         <div class="header__content">
             <div class="header__connection connection _container">
@@ -61,7 +61,65 @@
     </header>
 
     <div class="main ">
+        <div class="">
+            <form class="search _container">
+                <div class="search__address">
+                    <label for="search__address">Raion</label>
+                    <input type="text" id="search__address" name="search__address" placeholder="Introduceți adresa"/>
+                </div>
+                <ul class="search__list">
+                    <li>Cumpăr</li>
+                    <li>Locuință</li>
+                    <li>Camere</li>
+                    <li>Preț</li>
+                    <li>Filtru</li>
+                </ul>
+                <button class="search__btn btnRadius">Salvează căutarea</button>
+                <div class="search__filter"><img src="./img/buy-page/filter.svg" alt="filter"></div>
+            </form>
 
+            <div class="buy-page__content buy-page__container">
+                <ul class="buy-page__list">
+                    <li class="buy-page__item">
+                        <div class="buy-page__img"><img src="./img/product-page/room.jpg" alt=""></div>
+                        <div class=" card">
+                            <div class=" card__header">
+                                <h2 class="card__title">
+                                    Se oferă în chirie apartament cu 2 camere, 63m2
+                                </h2>
+                                <div class="card__favorite card__desktop">
+                                    <img src="./img/buy-page/favorite.svg" alt="favorite">
+                                </div>
+                                <div class="card__price card__price_mobile ">400 $</div>
+                            </div>
+
+                            <div class=" card__views ">
+                                <div class="card__views_text card__desktop">
+                                    <div class="card__views_time">4 ore în urmă</div>
+                                    <div class="card__views_count">
+                                        <img src="./img/product-page/eye.svg" alt="eye"/> 430
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class=" card__address">
+                                sec. Centru, str. Ștefan cel Mare
+                            </div>
+                            <div class=" card__features_wrapper">
+                                <div class="card__features">2 camere | 63m2 | etajul 4/11</div>
+                                <div class="card__price card__desktop">400 $</div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                </ul>
+                <div class="buy-page__pagination"><img src="./img/slider/arrow-prev.svg" alt="arrow-prev">
+                    <div> 1 2 5 4 5 ... 11</div>
+                    <img src="./img/slider/arrow-next.svg" alt="arrow-next"></div>
+            </div>
+        </div>
     </div>
 
     <footer class="footer">
