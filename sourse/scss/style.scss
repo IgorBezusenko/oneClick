@@ -14,7 +14,7 @@ $green: #a1c767;
 $blue: #60bebe;
 $grey: #f2f1f1;
 $white: #ffffff;
-$border-color:rgba(16, 23, 37, 0.7);
+$border-color: rgba(16, 23, 37, 0.7);
 $fontFamily: "DM Sans", sans-serif;
 
 // Переменные
@@ -26,6 +26,7 @@ $fontFamily: "DM Sans", sans-serif;
 @import "main";
 @import "product-page";
 @import "app-product-page";
+@import "buy-page";
 
 @import "footer";
 
@@ -79,7 +80,7 @@ $fontFamily: "DM Sans", sans-serif;
     line-height: 23px;
   }
 }
-.title-h2{
+.title-h2 {
   font-weight: 700;
   font-size: 24px;
   line-height: 31px;
@@ -130,36 +131,34 @@ $fontFamily: "DM Sans", sans-serif;
   }
 }
 
-.form-input{
-  input{
+.form-input {
+  input {
     min-width: 200px;
     height: 35px;
-    background: rgba(242, 241, 241, 0.5);;
+    background: rgba(242, 241, 241, 0.5);
     border: 1px solid $border-color;
     border-radius: 5px;
-    padding:6px 12px;
+    padding: 6px 12px;
     @media (max-width: $md3 + px) {
       min-width: 100%;
     }
   }
 }
 
-.form-select{
-
+.form-select {
   font-size: 16px;
   line-height: 21px;
-  select{
+  select {
     min-width: 200px;
     height: 35px;
 
-    background: rgba(242, 241, 241, 0.5);;
+    background: rgba(242, 241, 241, 0.5);
     border: 1px solid $border-color;
     border-radius: 5px;
     margin-top: 4px;
     @media (max-width: $md3 + px) {
       min-width: 100%;
     }
-
   }
 }
 
