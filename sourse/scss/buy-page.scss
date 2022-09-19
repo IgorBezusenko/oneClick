@@ -1,7 +1,22 @@
 .main {
   padding: 0;
 }
-
+.buy-page__container {
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+  //background-color: #F2F1F1;
+  @media (max-width: $md1 + px) {
+    max-width: 970px;
+    //background-color: #A1C767;
+  }
+  @media (max-width: $md2 + px) {
+    max-width: 750px;
+  }
+  @media (max-width: $md3 + px) {
+    max-width: none;
+    padding: 0 4px;
+  }
+}
 .buy-page {
   background-color: $white;
 
@@ -18,11 +33,16 @@
     grid-template-columns: 255px 1fr;
     border-radius: 5px;
     margin-bottom: 15px;
+    border: 1px solid $grey;
+
+    &:hover {
+      background-color: $grey;
+    }
   }
 
   &__img {
     width: 255px;
-    height: 170px;
+    height: auto;
 
     img {
       width: 100%;
@@ -40,17 +60,59 @@
     font-size: 20px;
     line-height: 26px;
   }
+
+  //
+  @media (max-width: $md1 + px) {
+
+  }
+  @media (max-width: $md2 + px) {
+
+  }
+  @media (max-width: $md3 + px) {
+    &__item {
+      grid-template-columns: 150px 1fr;
+      align-items: center;
+      border-radius: 0;
+      border: none;
+
+
+
+      &:hover {
+        background-color: inherit;
+      }
+    }
+
+    &__img {
+      width: 150px;
+      height: 100px;
+
+      img {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__pagination {
+      display: none;
+    }
+    //font-size: 16px;
+  }
 }
 
 .card {
-  background-color: $grey;
   padding: 17px 35px 35px 35px;
 
-  &__title {
+  &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
   }
 
   &__price {
@@ -65,8 +127,8 @@
     display: none;
   }
 
-  &__price_desktop {
-    //display: none;
+  &__desktop {
+    //display: block;
   }
 
   &__views {
@@ -102,6 +164,45 @@
   &__features {
     margin: 15px 0 0 0;
   }
+
+  //
+  @media (max-width: $md1 + px) {
+
+  }
+  @media (max-width: $md2 + px) {
+
+  }
+  @media (max-width: $md3 + px) {
+    padding: 0 0 0 5px;
+    &__title{
+
+      font-size: 14px;
+      line-height: 18px;
+
+
+    }
+    &__views {
+
+      margin: 0;
+    }
+    &__features {
+      margin: 0;
+    }
+    &__price_mobile {
+      display: block;
+    }
+    &__desktop {
+      display: none;
+    }
+
+    &__address, &__features,&__title  {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+
+  }
+
 }
 
 .search {
@@ -110,6 +211,7 @@
   line-height: 21px;
 
   &__address {
+
     display: flex;
     align-items: center;
     border-left: 1px solid $grey;
@@ -153,16 +255,40 @@
       }
     }
   }
+  &__btn{
+    width: 190px;
+
+    padding: 13px;
+    text-align: center;
+  }
+
+  &__filter{
+    display: none;
+  }
+
 
   //
   @media (max-width: $md1 + px) {
+    &__btn{
+      padding: 8px;
+    }
+
     &__address {
+      width: 100%;
       input {
         min-width: 240px;
       }
     }
   }
   @media (max-width: $md2 + px) {
+    &__list, &__btn{
+      display: none;
+    }
+    &__filter{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     font-size: 14px;
     &__address {
       border-left: none;

@@ -79,9 +79,9 @@ $(document).ready(function () {
   $(".product-slider-big").slick({
     prevArrow: `<button type="button" class="slick-prev"></button>`,
     nextArrow: `<button type="button" class="slick-next"></button>`,
-    dots: true,
-    // dotsClass:'slick-dots',
-    // adaptiveHeight: true,
+
+    speed: 700,
+    // fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     asNavFor: ".product-slider-min",
@@ -93,10 +93,13 @@ $(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     asNavFor: ".product-slider-big",
+    infinite:true,
     // dots: true,
     // centerMode: true,
-    infinite: false,
     focusOnSelect: true,
     variableWidth: true,
   });
 });
+// $('#button-rotation').on("click", "div", function(e) {
+//   $('.slider-for').slick('slickGoTo', $(this).index() + s1);
+// });
