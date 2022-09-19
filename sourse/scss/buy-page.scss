@@ -1,34 +1,138 @@
-.buy-page {
-  background-color: $white;
-}
-
 .main {
   padding: 0;
 }
+
+.buy-page {
+  background-color: $white;
+
+  &__list {
+    padding: 40px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 255px 1fr;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  &__img {
+    width: 255px;
+    height: 170px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.card {
+  background-color: $grey;
+  padding: 17px 35px 35px 35px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: $green;
+    white-space: nowrap;
+  }
+
+  &__price_mobile {
+    display: none;
+  }
+
+  &__price_desktop {
+    //display: none;
+  }
+
+  &__views {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 10px 0;
+  }
+
+  &__views_text {
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__views_count {
+    margin: 0 0 0 30px;
+  }
+
+  &__address, &__features {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  &__features_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__features {
+    margin: 15px 0 0 0;
+  }
+}
+
 .search {
   display: flex;
   font-size: 16px;
   line-height: 21px;
+
   &__address {
     display: flex;
     align-items: center;
     border-left: 1px solid $grey;
     border-top: 1px solid $grey;
     border-bottom: 1px solid $grey;
+
     label {
       display: block;
       padding: 14px 30px;
       color: $green;
     }
+
     input {
       min-width: 400px;
       padding: 14px;
       border-left: 1px solid $grey;
     }
   }
+
   &__list {
     display: flex;
     align-items: center;
+
     li {
       position: relative;
       width: 120px;
@@ -36,6 +140,7 @@
       border-left: 1px solid $grey;
       border-top: 1px solid $grey;
       border-bottom: 1px solid $grey;
+
       &:after {
         cursor: pointer;
         position: absolute;
@@ -62,11 +167,13 @@
     &__address {
       border-left: none;
       border-top: none;
+
       label {
         display: block;
         padding: 14px;
         color: $green;
       }
+
       input {
         min-width: 200px;
         padding: 14px;

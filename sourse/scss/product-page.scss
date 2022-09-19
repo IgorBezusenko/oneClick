@@ -76,10 +76,14 @@
     margin: 0 0 0 30px;
   }
 
-  &__address {
+  &__address, &__features {
     font-size: 16px;
     line-height: 21px;
   }
+
+ &__features {
+  margin: 15px 0 0 0;
+}
 
   &__slider {
     margin: 20px 0 0 0;
@@ -99,6 +103,7 @@
     //  width: 100%;
     //}
   }
+
   &__minImg {
     width: 144px;
     height: 88px;
@@ -156,9 +161,10 @@
     line-height: 25px;
   }
 
-  &__mapImg{
+  &__mapImg {
     width: 100%;
-    img{
+
+    img {
       width: 100%;
     }
   }
