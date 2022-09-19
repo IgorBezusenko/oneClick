@@ -1,0 +1,107 @@
+.calculator {
+  padding: 50px 0;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+
+  &__form {
+
+  }
+
+  &__form-select {
+    position: relative;
+
+    label {
+      position: absolute;
+      top: 20px;
+      left: 15px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: rgba(16, 23, 37, 0.7);
+      font-family: inherit;
+    }
+
+    select {
+      width: 100%;
+      padding: 20px 20px 7px 10px;
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 18px;
+      line-height: 23px;
+    }
+  }
+
+  &__text {
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: rgba(16, 23, 37, 0.7);
+    ul{
+      padding: 8px;
+      display: grid;
+      grid-template-columns: repeat(2 , 1fr);
+      grid-gap: 20px;
+      //display: flex;
+      //justify-content: flex-start;
+      //align-items: center;
+      //flex-wrap: wrap;
+
+    }
+    ul > li {
+      span {
+        font-size: 18px;
+        line-height: 23px;
+        color:$black
+      }
+
+    }
+    &_green{
+      color: $green !important;
+    }
+  }
+&__btnWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  &__btn {
+    width: 250px;
+    padding: 9px;
+    margin: 20px 0 0 0;
+    text-align: center;
+  }
+
+  //
+  //@media (max-width: $md1 + px) {
+  //
+  //}
+  //@media (max-width: $md2 + px) {
+  //
+  //}
+  @media (max-width: $md3 + px) {
+    padding: 25px 0 0 0 ;
+
+    &__content {
+      display: block;
+      grid-template-columns: 2fr 1fr;
+      gap: 10px;
+    }
+
+    &__text {
+      background-color: $grey;
+      padding: 0 24px 25px 24px;
+      ul{
+        gap: 20px 10px;
+      }
+    }
+
+  }
+
+
+}

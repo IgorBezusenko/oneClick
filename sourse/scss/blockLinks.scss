@@ -9,7 +9,7 @@
   &__calculator {
     margin: 0 20px 0 0;
   }
-  .calculator {
+  .calculatorLink {
     flex: 1 1 45%;
     align-self: stretch;
     //width: 530px;
@@ -96,7 +96,7 @@
   @media (max-width: $md3 + px) {
     margin: 25px 0 0 0;
 
-    .calculator {
+    .calculatorLink {
       padding: 6px 6px 70px 6px;
       height: 200px;
 

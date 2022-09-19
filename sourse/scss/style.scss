@@ -15,6 +15,7 @@ $blue: #60bebe;
 $grey: #f2f1f1;
 $white: #ffffff;
 $border-color: rgba(16, 23, 37, 0.7);
+$border-color-grey: rgba(16, 23, 37, 0.2);
 $fontFamily: "DM Sans", sans-serif;
 
 // Переменные
@@ -27,6 +28,8 @@ $fontFamily: "DM Sans", sans-serif;
 @import "product-page";
 @import "app-product-page";
 @import "buy-page";
+@import "calculator-page";
+
 
 @import "footer";
 
