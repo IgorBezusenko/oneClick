@@ -1,5 +1,5 @@
 const rangeInputs = document.querySelectorAll('input[type="range"]');
-// const numberInput = document.querySelector('input[type="number"]');
+const numberInput = document.querySelector('input[type="number"]');
 
 function handleInputChange(e) {
   let target = e.target;
@@ -17,4 +17,4 @@ rangeInputs.forEach((input) => {
   input.addEventListener("input", handleInputChange);
 });
 
-// numberInput.addEventListener("input", handleInputChange);
+numberInput.addEventListener("input", handleInputChange);

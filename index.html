@@ -149,23 +149,90 @@
                     </div>
                   </li>
                 </ul>
-                <div class="calculator__form-input">
-                  <input
-                    id="calculator__form_input"
-                    type="text"
-                    placeholder="Regiunea cumpărării proprietății"
-                  />
-                </div>
-                <div class="calculator__form-range">
-                  <input
-                    type="range"
-                    value="70"
-                    min="0"
-                    max="100"
-                    oninput="rangevalue.value=value"
-                  />
-                  <output id="rangevalue">70</output>
-                </div>
+
+                 <div class="calculator__form-input">
+                   <input
+                           id="region_buy_build"
+                           type="text"
+                           placeholder="Regiunea cumpărării proprietății"
+                   />
+                 </div>
+                 <div class="calculator__form-range">
+                   <div class="calculator__form-content">
+                     <label for="rangenumber1">Valoarea imobiliară</label>
+                     <input
+                             type="number"
+                             id="rangenumber1"
+                             min="200000"
+                             max="100000000"
+                             value="50000000"
+                             oninput="range1.value=value"
+                     />
+                     <input
+                             type="range"
+                             min="200000"
+                             max="100000000"
+                             value="50000000"
+                             id="range1"
+                             oninput="rangenumber1.value=value"
+                     />
+                   </div>
+                   <div class="calculator__form-text">
+                     <div>200 mii MDL</div>
+                     <div>100 milioane MDL</div>
+                   </div>
+                 </div>
+                 <div class="calculator__form-range">
+                   <div class="calculator__form-content">
+                     <label for="rangenumber2">Valoarea imobiliară</label>
+                     <input
+                             type="number"
+                             id="rangenumber2"
+                             min="50000"
+                             max="100000"
+                             value="75000"
+                             oninput="range2.value=value"
+                     />
+                     <input
+                             type="range"
+                             min="50000"
+                             max="100000"
+                             value="75000"
+                             id="range2"
+                             oninput="rangenumber2.value=value"
+                     />
+                   </div>
+                   <div class="calculator__form-text">
+                     <div>50 mii MDL</div>
+                     <div>100 mii MDL</div>
+                   </div>
+                 </div>
+                 <div class="calculator__form-range">
+                   <div class="calculator__form-content">
+                     <label for="rangenumber3">Valoarea imobiliară</label>
+                     <input
+                             type="number"
+                             id="rangenumber3"
+                             min="1"
+                             max="30"
+                             value="15"
+                             oninput="range3.value=value"
+                     />
+                     <input
+                             type="range"
+                             min="1"
+                             max="30"
+                             value="15"
+                             id="range3"
+                             oninput="rangenumber3.value=value"
+                     />
+                   </div>
+                   <div class="calculator__form-text">
+                     <div>1 an</div>
+                     <div>30 de ani</div>
+                   </div>
+                 </div>
+
               </div>
               <div class="calculator__text">
                 <ul>
