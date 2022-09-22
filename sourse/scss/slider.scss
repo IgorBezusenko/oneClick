@@ -139,3 +139,30 @@
 .product-slider-min .product__sliderItem {
   margin: 0 10px 0 0;
 }
+//News
+.news__slider {
+  min-width: 0;
+  position: relative;
+  //margin: 20px  0 0 0;
+}
+.news__slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  width: 35px;
+  height: 35px;
+  margin-top: -10px;
+}
+.news__slider .news__slider-item {
+  margin: 0 10px 0 0;
+}
+
+.news__slider .slick-arrow.slick-prev {
+  left: -20px;
+  background: url("../img/news-page/left.svg") 0 0 /100% no-repeat;
+}
+
+.news__slider .slick-arrow.slick-next {
+  right: -10px;
+  background: url("../img/news-page/right.svg") 0 0 /100% no-repeat;
+}

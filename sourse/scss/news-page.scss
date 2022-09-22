@@ -1,0 +1,232 @@
+.news {
+
+  background-color: $grey;
+  padding: 50px 0;
+
+  &__container {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+    border-bottom: 1px solid $border-color-grey;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+
+      li {
+        font-size: 14px;
+        line-height: 18px;
+        padding-bottom: 10px;
+
+        &.active {
+          color: $green;
+          border-bottom: 2px solid $green;
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  &__search {
+    flex-basis: 200px;
+
+    border-bottom: 2px solid $green;
+    padding-bottom: 8px;
+
+    input {
+      background-color: inherit;
+      width: calc(100% - 21px);
+    }
+
+    label img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__comfort {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 20px;
+  }
+
+  &__mainTopics {
+    align-self:stretch;
+    max-width: 375px;
+    background-color: $white;
+    border-radius: 5px;
+    padding: 10px 24px;
+
+    &-title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 15px;
+    }
+    &-item{
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid $green;
+    }
+  }
+
+  &__stories{
+    //background-color: $black;
+    margin-top: 50px;
+    padding: 20px 0 50px 0;
+    color: $white;
+    &-title{
+
+      margin-bottom: 20px;
+    }
+  }
+  &__slider{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &-item{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      background-color: $bg-opacity;
+      border-radius: 5px;
+      width: 166px;
+      height: 232px;
+      padding: 9px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+      img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        z-index: 9;
+      }
+    }
+    &-text{
+      position: relative;
+      z-index: 10;
+      //left: 9px;
+      //bottom: 9px;
+    }
+  }
+
+  @media (max-width: $md2 + px) {
+    &__header  ul {
+      gap: 14px;
+    }
+  }
+  @media (max-width: $md3 + px) {
+    & ._container {
+      padding: 0;
+    }
+    & .title-h2{
+      padding: 0 24px ;
+    }
+
+    background-color: $white;
+    padding: 25px 0;
+    &__header {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      border-bottom: none;
+      margin-bottom: 20px !important;
+      padding: 0 24px;
+      ul {
+        flex-wrap: wrap;
+        gap: 4px 20px;
+      }
+    }
+    &__search {
+      flex-basis: 750px;
+    }
+    &__comfort {
+      flex-direction: column;
+      gap: 20px 0;
+
+
+    }
+    &__mainTopics{
+      align-self:center;
+    }
+  }
+}
+
+.news__banner-big {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  background: $bg-opacity;
+  width: 735px;
+  height: 385px;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    z-index: 0;
+  }
+
+  font-weight: 700;
+  color: $white;
+
+  &__title {
+    position: relative;
+    font-size: 14px;
+    line-height: 18px;
+    z-index: 2;
+  }
+
+  &__text {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    font-size: 36px;
+    line-height: 47px;
+    z-index: 2;
+  }
+
+  &__date {
+    position: relative;
+    font-size: 13px;
+    line-height: 17px;
+    z-index: 2;
+  }
+
+  @media (max-width: $md3 + px) {
+
+    width: 375px;
+    height: 300px;
+    gap: 5px;
+    padding: 10px 24px;
+
+    &__text {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+}

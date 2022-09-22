@@ -16,6 +16,7 @@ $grey: #f2f1f1;
 $white: #ffffff;
 $border-color: rgba(16, 23, 37, 0.7);
 $border-color-grey: rgba(16, 23, 37, 0.2);
+$bg-opacity: rgba(16, 23, 37, 0.4);
 $fontFamily: "DM Sans", sans-serif;
 
 // Переменные
@@ -31,6 +32,7 @@ $fontFamily: "DM Sans", sans-serif;
 @import "calculator-page";
 @import "partner-page";
 @import "partner-open-page";
+@import "news-page";
 
 @import "footer";
 

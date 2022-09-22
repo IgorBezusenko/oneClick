@@ -1,4 +1,4 @@
-.main {
+.open-partner {
   background-color: $white;
   @media (max-width: $md3 + px) {
     ._container{
@@ -8,10 +8,13 @@
 }
 
 .open-partner {
-  background-color: $grey;
-  padding: 45px 17px;
-  border-radius: 5px;
+
+
+
   &__card{
+    background-color: $grey;
+    padding: 45px 17px;
+    border-radius: 5px;
     display: grid;
     grid-template-columns: minmax(0, 200px ) minmax(0, 600px ) minmax(0, 300px );
     justify-content: space-between;
@@ -50,8 +53,10 @@
   //}
   @media (max-width: $md3 + px) {
     background-color: $white;
-    padding: 20px 0;
+
     &__card{
+      background-color: $white;
+      padding: 20px 0;
       display: grid;
       grid-template-columns: 1fr;
       justify-content: space-between;
