@@ -1,6 +1,7 @@
 .main {
   padding: 0;
 }
+
 .buy-page__container {
   max-width: $maxWidthContainer + px;
   margin: 0 auto;
@@ -17,6 +18,7 @@
     padding: 0 4px;
   }
 }
+
 .buy-page {
   background-color: $white;
 
@@ -76,7 +78,6 @@
       border: none;
 
 
-
       &:hover {
         background-color: inherit;
       }
@@ -109,7 +110,8 @@
     align-items: center;
     flex-wrap: wrap;
   }
-  &__title{
+
+  &__title {
     font-weight: 700;
     font-size: 20px;
     line-height: 26px;
@@ -174,7 +176,7 @@
   }
   @media (max-width: $md3 + px) {
     padding: 0 0 0 5px;
-    &__title{
+    &__title {
 
       font-size: 14px;
       line-height: 18px;
@@ -195,7 +197,7 @@
       display: none;
     }
 
-    &__address, &__features,&__title  {
+    &__address, &__features, &__title {
       font-size: 14px;
       line-height: 18px;
     }
@@ -207,11 +209,13 @@
 
 .search {
   display: flex;
+  justify-content: space-between;
+  //align-items: center;
   font-size: 16px;
   line-height: 21px;
 
   &__address {
-
+    flex-grow: 1;
     display: flex;
     align-items: center;
     border-left: 1px solid $grey;
@@ -225,7 +229,8 @@
     }
 
     input {
-      min-width: 400px;
+      flex: 1 1 400px;
+      //min-width: 400px;
       padding: 14px;
       border-left: 1px solid $grey;
     }
@@ -237,7 +242,7 @@
 
     li {
       position: relative;
-      width: 120px;
+      min-width: 120px;
       padding: 14px 8px;
       border-left: 1px solid $grey;
       border-top: 1px solid $grey;
@@ -255,36 +260,45 @@
       }
     }
   }
-  &__btn{
+
+  &__btn {
     width: 190px;
 
     padding: 13px;
     text-align: center;
   }
 
-  &__filter{
+  &__filter {
     display: none;
   }
 
 
   //
   @media (max-width: $md1 + px) {
-    &__btn{
+
+    &__list {
+      li {
+        min-width: 112px;
+      }
+    }
+
+    &__btn {
       padding: 8px;
     }
 
     &__address {
       width: 100%;
+
       input {
         min-width: 240px;
       }
     }
   }
   @media (max-width: $md2 + px) {
-    &__list, &__btn{
+    &__list, &__btn {
       display: none;
     }
-    &__filter{
+    &__filter {
       display: flex;
       justify-content: center;
       align-items: center;
