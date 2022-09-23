@@ -7,6 +7,7 @@
 
 .slick-track {
   display: flex;
+  gap: 20px;
   //justify-content: center;
   //align-items: flex-start;
   @media (max-width: $md3) {
@@ -134,7 +135,7 @@
 .product-slider-min {
   min-width: 0;
   position: relative;
-  margin: 20px  0 0 0;
+  margin: 20px 0 0 0;
 }
 .product-slider-min .product__sliderItem {
   margin: 0 10px 0 0;
@@ -165,4 +166,34 @@
 .news__slider .slick-arrow.slick-next {
   right: -10px;
   background: url("../img/news-page/right.svg") 0 0 /100% no-repeat;
+}
+
+// News__list
+.news__list {
+  min-width: 0;
+  position: relative;
+}
+
+.news__list .slick-dots {
+  display: flex;
+  justify-content: center;
+}
+
+.news__list .slick-dots li {
+  margin-right: 8px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.news__list .slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.news__list .slick-dots li.slick-active button {
+  background-color: $green;
 }
