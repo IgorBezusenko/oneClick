@@ -1,0 +1,276 @@
+.open-news {
+  padding: 50px 0;
+
+  &__container {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  &__breadcrumb {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  &__content {
+
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 20px;
+
+    &_bold {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__banner {
+    width: 100%;
+    height: 460px;
+
+    img {
+      //position: absolute;
+      width: 100%;
+      height: 90%;
+
+    }
+
+  }
+
+  &__like {
+    padding: 25px 0;
+    border-top: 1px solid $green;
+    border-bottom: 1px solid $green;
+  }
+
+  &__like-content {
+    display: flex;
+    align-items: center;
+
+  }
+
+  &__like-text {
+    color: $border-color;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__like-btn {
+    width: 90px;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: inherit;
+    margin-right: 20px;
+    padding: 7px 17px;
+    border: 2px solid $black;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: $green;
+      color: $white;
+      border: 2px solid $green;
+
+
+    }
+  }
+
+  &__comments {
+    max-width: 420px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+
+  }
+
+  .comments-form {
+    //max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+
+    &__input {
+      width: 100%;
+
+      input, textarea {
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px 12px;
+      }
+
+
+    }
+
+
+    &__btn {
+      padding: 10px 24px;
+
+    }
+  }
+
+  .comments-item {
+    //max-width: 420px;
+    margin-top: 25px;
+
+    &__header {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &__img {
+      width: 50px;
+      height: 50px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__name {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  .comments-toaster {
+
+    max-width: 310px;
+    background-color: $white;
+    border-radius: 5px;
+    padding: 7px 16px;
+    margin-top: 20px;
+
+    &__container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &__img {
+      width: 30px;
+      height: 30px;
+    }
+
+    &__title {
+      font-weight: 500;
+    }
+
+    &__text {
+      font-weight: 400;
+    }
+
+  }
+  &__recommend{
+    padding-top: 20px;
+    border-top: 1px solid $green;
+
+    .news__banner-min{
+      width: 200px;
+      &__img {
+        width: 200px;
+        height: 150px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $md2 + px) {
+    &__container {
+      max-width: 750px;
+    }
+    &__banner {
+      width: 100%;
+      height: 360px;
+
+    }
+  }
+
+
+  @media (max-width: $md3 + px) {
+    padding: 25px 0;
+    & ._container {
+      padding: 0;
+    }
+    & .title-h2 {
+      padding: 0 24px;
+    }
+
+    &__breadcrumb {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 0 24px;
+    }
+    &__content, &__comments  {
+      padding: 0 24px;
+    }
+    &__recommend{
+      .open-news__title{
+        padding: 0 24px;
+      }
+    }
+    &__comments {
+      padding-bottom: 20px;
+    }
+    &__banner {
+      height: 300px;
+    }
+    &__like {
+      padding: 25px 24px;
+    }
+
+    .comments-form {
+
+      &__input {
+        input, textarea {
+          background-color: $grey;
+        }
+      }
+
+
+    }
+    .comments-toaster {
+      max-width: 242px;
+      background-color: $grey;
+    }
+  }
+}

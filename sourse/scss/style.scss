@@ -22,6 +22,7 @@ $fontFamily: "DM Sans", sans-serif;
 // Переменные
 
 @import "zeroing_style";
+@import "breadcrumb";
 
 @import "header";
 @import "slider";
@@ -33,6 +34,7 @@ $fontFamily: "DM Sans", sans-serif;
 @import "partner-page";
 @import "partner-open-page";
 @import "news-page";
+@import "open-news-page";
 
 @import "footer";
 
@@ -167,7 +169,6 @@ $fontFamily: "DM Sans", sans-serif;
     }
   }
 }
-
 //
 //@media (max-width: $md1 + px) {
 //

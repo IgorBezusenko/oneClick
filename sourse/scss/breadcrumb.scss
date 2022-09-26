@@ -1,0 +1,27 @@
+.breadcrumb {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0 15px;
+
+  padding-bottom: 10px;
+  border-bottom: 1px solid $green;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+
+  &__item {
+    list-style: "/";
+    padding-left: 5px;
+    word-wrap: break-word;
+
+    &.active {
+      color: $green;
+    }
+  }
+
+  &__item:first-child {
+    list-style: none;
+    padding-left: 0;
+  }
+}
