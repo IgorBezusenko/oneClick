@@ -41,7 +41,6 @@ $(document).ready(function () {
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 4,
-    // centerMode: true,
     responsive: [
       {
         breakpoint: 1312,
@@ -81,11 +80,9 @@ $(document).ready(function () {
     nextArrow: `<button type="button" class="slick-next"></button>`,
 
     speed: 700,
-    // fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     asNavFor: ".product-slider-min",
-    // centerMode: true,
   });
 
   $(".product-slider-min").slick({
@@ -94,8 +91,6 @@ $(document).ready(function () {
     slidesToScroll: 1,
     asNavFor: ".product-slider-big",
     infinite: true,
-    // dots: true,
-    // centerMode: true,
     focusOnSelect: true,
     variableWidth: true,
   });
@@ -104,20 +99,14 @@ $(document).ready(function () {
     arrows: true,
     prevArrow: `<button type="button" class="slick-prev"></button>`,
     nextArrow: `<button type="button" class="slick-next"></button>`,
-    // dots: true,
-    // dotsClass: "slick-dots category-slick-dots",
-    // adaptiveHeight: true,
+
     variableWidth: true,
     infinite: false,
-    // slidesToShow: 6,
-    // slidesToScroll: 6,
     responsive: [
       {
         breakpoint: 767,
         settings: {
           arrows: false,
-          // slidesToShow: 1,
-          // slidesToScroll: 1,
         },
       },
     ],
@@ -125,14 +114,11 @@ $(document).ready(function () {
 
   $(".news__list").slick({
     arrows: false,
-    // dots: true,
     dotsClass: "slick-dots category-slick-dots",
-    // adaptiveHeight: true,
     variableWidth: true,
     infinite: false,
     slidesToShow: 4,
     slidesToScroll: 4,
-    // swipe: true,
 
     responsive: [
       {
@@ -141,6 +127,53 @@ $(document).ready(function () {
           dots: true,
           slidesToShow: 2,
           slidesToScroll: 2,
+        },
+      },
+    ],
+  });
+  $(".blog__video-list").slick({
+    arrows: false,
+    dots: true,
+    dotsClass: "slick-dots category-slick-dots",
+    variableWidth: true,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    centerMode: true,
+
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
+  });
+
+  $(".blog__client-list").slick({
+    arrows: false,
+    dots: true,
+    dotsClass: "slick-dots category-slick-dots",
+    variableWidth: false,
+    rows: 2,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1080,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          rows: 1,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],
