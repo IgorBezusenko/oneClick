@@ -1,3 +1,9 @@
+.add-product{
+  margin: 50px 0;
+  @media (max-width: $md3 + px) {
+    margin:  0;
+  }
+}
 .advertisement {
   background-color: $white;
   padding: 50px;
@@ -8,7 +14,8 @@
     cursor: pointer;
   }
 
-  &__title {
+  &__title1 {
+    //display: block;
     font-weight: 500;
     margin: 20px 0;
   }
@@ -75,7 +82,11 @@
     flex-wrap: wrap;
     gap: 8px;
   }
-
+//&__photo{
+//
+//  //background-color: green;
+//  padding: 100px;
+//}
   &__addPhoto {
     input[type="file"] {
       display: none;
@@ -182,7 +193,7 @@
   @media (max-width: $md3 + px) {
     padding: 0 0 20px 0;
 
-    &__title {
+    &__title1 {
       font-weight: 700;
     }
 
