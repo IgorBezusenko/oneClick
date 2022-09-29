@@ -40,6 +40,17 @@ position: relative;
     }
   }
   &__city {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 5px;
+    &:hover{
+      background-color: $grey;
+
+    }
+    &.active{
+      background-color: $grey;
+
+    }
     @media (max-width: $md3+px) {
       img{
         width: 15px;
@@ -55,13 +66,24 @@ position: relative;
 
   &__phone {
     margin: 0 28px 0 0;
+    padding: 10px;
+    cursor: pointer;
+    &:hover{
+      background-color: $grey;
+
+    }
     @media (max-width: $md3+px) {
       margin: 0 12px 0 0;
     }
   }
 
   &__login {
+    cursor: pointer;
+    padding: 10px;
+    &:hover{
+      background-color: $grey;
 
+    }
   }
 }
 
@@ -149,7 +171,7 @@ position: relative;
         bottom: 0;
       }
     }
-    &._active {
+    &.active {
       span {
         transform: scale(0);
 
@@ -166,4 +188,105 @@ position: relative;
     }
   }
 
+}
+
+.connection__city-bg-modal{
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  //background-color: #60bebe;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 10;
+}
+.connection__city-bg-modal.active{
+  display: block;
+}
+
+.connection__city-modal{
+  width: 200px;
+  height: 232px;
+
+  position: relative;
+  z-index: 11;
+
+  padding: 10px;
+  background-color: $white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  ul{
+    overflow-y: scroll;
+    height: 180px;
+
+    margin-top: 10px;
+    li{
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+  }
+}
+
+.connection__city-input{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  label{
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/main/lupa.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20px;
+    left: 17px;
+    z-index: 11;
+  }
+  input{
+    width: 150px;
+    height: 30px;
+    background-color: $grey;
+    border-radius: 5px;
+    padding: 9px 9px 9px 33px;
+    position: relative;
+
+  }
+}
+
+.menu__body_burger{
+  display: none;
+}
+@media (max-width: $md3+px) {
+  .menu__body_burger{
+    position: fixed;
+    top: 0;
+    left: 0;
+    //display: block;
+
+    width: 100vw;
+    height: 100vh;
+    padding: 35px;
+    background-color: #ffffff;
+    z-index: 12;
+
+    &.active{
+      display: block;
+    }
+
+    .closebtn {
+      position: absolute;
+      top: 40px;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+  }
+  .menu__list_burger{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
 }
