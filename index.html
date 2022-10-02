@@ -85,8 +85,13 @@
                     >Clădiri noi</a
                   >
                 </li>
-                <li><a href="" class="menu__link">Ipotecă</a></li>
-                <li><a href="" class="menu__link">Servicii</a></li>
+                <li onclick="showModalIpoteca()" class="menu__link">
+                  Ipotecă
+                </li>
+                <li class="menu__link" onclick="showModalService()">
+
+                  Servicii
+                </li>
                 <li>
                   <a href="partner-page.html" class="menu__link">Parteneri</a>
                 </li>
@@ -98,6 +103,59 @@
               <span></span>
               <span></span>
               <span></span>
+            </div>
+            <div id="modalIpoteca" class="modal__wrapper">
+              <div class="modal">
+                <div class="justify align-center">
+                  <h3 class="modal__title title">Ipotecă</h3>
+                  <span onclick="closeModalIpoteca()" class="modal__close"
+                    >&times;</span
+                  >
+                </div>
+                <div class="modal__content">
+                  <a href="calculator-page.html">
+                    <div class="service">
+                      <div class="service__img">
+                        <img src="./img/main/calc.svg" alt="calc" />
+                      </div>
+                      <div class="service__title">Calculator ipotecă</div>
+                      <div class="service__text">Calculează</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="modalService" class="modal__wrapper">
+              <div class="modal">
+                <div class="justify align-center">
+                  <h3 class="modal__title title">Servicii</h3>
+                  <span onclick="closeModalService()" class="modal__close"
+                    >&times;</span
+                  >
+                </div>
+
+                <div class="modal__content">
+                  <a href="buy-page.html">
+                    <div class="service">
+                      <div class="service__img">
+                        <img src="./img/main/house-circle.svg" alt="home" />
+                      </div>
+                      <div class="service__title">Cumpărare și vânzare</div>
+                      <div class="service__text">123 557 oferte</div>
+                    </div>
+                  </a>
+                  <a href="rent-page.html">
+                    <div class="service">
+                      <div class="service__img">
+                        <img src="./img/main/sofa.svg" alt="sofa" />
+                      </div>
+                      <div class="service__title">Chirie</div>
+                      <div class="service__text">50 222 oferte</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
             <nav id="mySidenav" class="menu__body_burger sidenav">
               <span class="closebtn" onclick="closeBurgerMenu()">&times;</span>

@@ -64,3 +64,21 @@ const showBurgerService = () => {
 const closeBurgerService = (e) => {
   document.getElementById("mySidenavService").style.width = 0;
 };
+
+const showModalIpoteca = () => {
+  document.getElementById("modalIpoteca").style.marginTop = 0;
+  document.body.style.overflow = "hidden";
+};
+const closeModalIpoteca = (e) => {
+  document.getElementById("modalIpoteca").style.marginTop = "-100%";
+  document.body.style.overflow = "auto";
+};
+
+const showModalService = () => {
+  document.getElementById("modalService").style.marginTop = 0;
+  document.body.style.overflow = "hidden";
+};
+const closeModalService = (e) => {
+  document.getElementById("modalService").style.marginTop = "-100%";
+  document.body.style.overflow = "auto";
+};
