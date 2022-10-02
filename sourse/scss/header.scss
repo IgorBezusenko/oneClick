@@ -1,9 +1,7 @@
-
 .header {
   background-color: $white;
-position: relative;
+  position: relative;
   &__content {
-
   }
 }
 
@@ -27,32 +25,30 @@ position: relative;
       display: none;
     }
   }
-  &-block{
+  &-block {
     display: flex;
     align-items: center;
     span {
       margin: 0 5px;
     }
     @media (max-width: $md3+px) {
-     span{
-       display: none;
-     }
+      span {
+        display: none;
+      }
     }
   }
   &__city {
     cursor: pointer;
     position: relative;
     padding: 12px 5px;
-    &:hover{
+    &:hover {
       background-color: $grey;
-
     }
-    &.active{
+    &.active {
       background-color: $grey;
-
     }
     @media (max-width: $md3+px) {
-      img{
+      img {
         width: 15px;
         margin: 0 6px 0 0;
       }
@@ -61,16 +57,14 @@ position: relative;
 
   &__auth {
     display: flex;
-
   }
 
   &__phone {
     margin: 0 28px 0 0;
     padding: 10px;
     cursor: pointer;
-    &:hover{
+    &:hover {
       background-color: $grey;
-
     }
     @media (max-width: $md3+px) {
       margin: 0 12px 0 0;
@@ -80,9 +74,8 @@ position: relative;
   &__login {
     cursor: pointer;
     padding: 10px;
-    &:hover{
+    &:hover {
       background-color: $grey;
-
     }
   }
 }
@@ -116,7 +109,7 @@ position: relative;
       margin: 0 39px 0 0;
       @media (max-width: $md2+px) {
         //display: none;
-        margin: 0 7.5px ;
+        margin: 0 7.5px;
       }
     }
   }
@@ -129,17 +122,14 @@ position: relative;
     @media (max-width: $md2+px) {
       font-size: 15px;
       line-height: 19px;
-
     }
-    @media (min-width: $md2+px) {
+    @media (min-width: $md3+px) {
       &:hover {
         color: $green;
       }
-
     }
   }
 }
-
 
 .icon-menu {
   display: none;
@@ -187,10 +177,9 @@ position: relative;
       }
     }
   }
-
 }
 
-.connection__city-bg-modal{
+.connection__city-bg-modal {
   width: 100vw;
   height: 100vh;
   display: none;
@@ -200,11 +189,11 @@ position: relative;
   left: 0;
   z-index: 10;
 }
-.connection__city-bg-modal.active{
+.connection__city-bg-modal.active {
   display: block;
 }
 
-.connection__city-modal{
+.connection__city-modal {
   width: 200px;
   height: 232px;
 
@@ -215,12 +204,12 @@ position: relative;
   background-color: $white;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  ul{
+  ul {
     overflow-y: scroll;
     height: 180px;
 
     margin-top: 10px;
-    li{
+    li {
       font-weight: 400;
       font-size: 14px;
       line-height: 18px;
@@ -230,11 +219,11 @@ position: relative;
   }
 }
 
-.connection__city-input{
+.connection__city-input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  label{
+  label {
     width: 20px;
     height: 20px;
     background-image: url(../img/main/lupa.svg);
@@ -244,49 +233,106 @@ position: relative;
     left: 17px;
     z-index: 11;
   }
-  input{
+  input {
     width: 150px;
     height: 30px;
     background-color: $grey;
     border-radius: 5px;
     padding: 9px 9px 9px 33px;
     position: relative;
-
   }
 }
 
-.menu__body_burger{
-  display: none;
+//.menu__body_burger {
+//  display: none;
+//}
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
+
+/* The navigation menu links */
+.sidenav a {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  padding: 0 0 2px 0;
+
+  //transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav li:hover {
+  a {
+    color: $green;
+    padding: 0;
+    border-bottom: 2px solid $green;
+  }
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
 @media (max-width: $md3+px) {
-  .menu__body_burger{
+  .menu__body_burger {
     position: fixed;
     top: 0;
     left: 0;
-    //display: block;
 
-    width: 100vw;
-    height: 100vh;
-    padding: 35px;
     background-color: #ffffff;
     z-index: 12;
 
-    &.active{
-      display: block;
-    }
+    //&.active {
+    //  padding: 35px;
+    //}
 
     .closebtn {
       position: absolute;
-      top: 40px;
+      top: 50px;
       right: 25px;
       font-size: 36px;
       margin-left: 50px;
     }
   }
-  .menu__list_burger{
+  .menu__list_burger {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding: 0 35px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+
+    li {
+      cursor: pointer;
+    }
   }
+}
+
+.justify {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.align-center {
+  display: flex;
+  align-items: center;
+}
+.ml-20 {
+  margin-left: 20px;
 }

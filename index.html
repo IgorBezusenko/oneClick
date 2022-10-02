@@ -15,20 +15,26 @@
       <header class="header">
         <div class="header__content">
           <div class="header__connection connection _container">
-
-            <div class="connection__city ">
-             <div class="connection-block connection__city-modalShow">
-               <img src="./img/header/Subtract.svg" alt="location" />
-               <span>Chișinău</span>
-               <img src="./img/header/vector_down.svg" alt="vector" />
-             </div>
-              <div class="connection__city-bg-modal ">
-                <div class="connection__city-modal " >
+            <div class="connection__city">
+              <div class="connection-block connection__city-modalShow">
+                <img src="./img/header/Subtract.svg" alt="location" />
+                <span>Chișinău</span>
+                <img src="./img/header/vector_down.svg" alt="vector" />
+              </div>
+              <div class="connection__city-bg-modal">
+                <div class="connection__city-modal">
                   <div class="connection__city-input">
-                    <label for="connection__city-input">
-
-                    </label>
-                    <input id="connection__city-input" type="text" placeholder="Indică orașul"> <img src="./img/main/close.svg" alt="close" class="connection__city-close">
+                    <label for="connection__city-input"> </label>
+                    <input
+                      id="connection__city-input"
+                      type="text"
+                      placeholder="Indică orașul"
+                    />
+                    <img
+                      src="./img/main/close.svg"
+                      alt="close"
+                      class="connection__city-close"
+                    />
                   </div>
                   <ul>
                     <li>Chișinău</li>
@@ -36,13 +42,13 @@
                     <li>Cahul</li>
                     <li>Chișinău</li>
                     <li>Bălți</li>
-                    <li>Cahul</li><li>Chișinău</li>
+                    <li>Cahul</li>
+                    <li>Chișinău</li>
                     <li>Bălți</li>
                     <li>Cahul</li>
                     <li>Chișinău</li>
                     <li>Bălți</li>
                     <li>Cahul</li>
-
                   </ul>
                 </div>
               </div>
@@ -62,39 +68,90 @@
 
           <div class="header__menu menu _container">
             <div class="menu__logo logo">
-              <a href="index.html"> <img src="./img/header/logo_header.svg" alt="logo"/></a>
+              <a href="index.html">
+                <img src="./img/header/logo_header.svg" alt="logo"
+              /></a>
             </div>
             <nav class="menu__body">
               <ul class="menu__list">
-                <li><a href="buy-page.html" class="menu__link">Cumpărare</a></li>
-                <li><a href="rent-page.html" class="menu__link">Închiriere</a></li>
-                <li><a href="new-build-page.html" class="menu__link">Clădiri noi</a></li>
+                <li>
+                  <a href="buy-page.html" class="menu__link">Cumpărare</a>
+                </li>
+                <li>
+                  <a href="rent-page.html" class="menu__link">Închiriere</a>
+                </li>
+                <li>
+                  <a href="new-build-page.html" class="menu__link"
+                    >Clădiri noi</a
+                  >
+                </li>
                 <li><a href="" class="menu__link">Ipotecă</a></li>
                 <li><a href="" class="menu__link">Servicii</a></li>
-                <li><a href="partner-page.html" class="menu__link">Parteneri</a></li>
+                <li>
+                  <a href="partner-page.html" class="menu__link">Parteneri</a>
+                </li>
                 <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
                 <li><a href="blog-page.html" class="menu__link">Blog</a></li>
               </ul>
             </nav>
-            <div class="menu__icon icon-menu " >
+            <div class="menu__icon icon-menu" onclick="showBurgerMenu()">
               <span></span>
               <span></span>
               <span></span>
             </div>
-           <nav class="menu__body_burger">
-             <span class="closebtn" onclick="closeBurgerMenu()">&times;</span>
-             <ul class="menu__list_burger">
-               <li><a href="buy-page.html" class="menu__link">Cumpărare</a></li>
-               <li><a href="rent-page.html" class="menu__link">Închiriere</a></li>
-               <li><a href="new-build-page.html" class="menu__link">Clădiri noi</a></li>
-               <li><a href="" class="menu__link">Ipotecă</a></li>
-               <li><a href="" class="menu__link">Servicii</a></li>
-               <li><a href="partner-page.html" class="menu__link">Parteneri</a></li>
-               <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
-               <li><a href="blog-page.html" class="menu__link">Blog</a></li>
-             </ul>
-           </nav>
-
+            <nav id="mySidenav" class="menu__body_burger sidenav">
+              <span class="closebtn" onclick="closeBurgerMenu()">&times;</span>
+              <ul class="menu__list_burger">
+                <li>
+                  <a href="buy-page.html" class="menu__link">Cumpărare</a>
+                </li>
+                <li>
+                  <a href="rent-page.html" class="menu__link">Închiriere</a>
+                </li>
+                <li>
+                  <a href="new-build-page.html" class="menu__link"
+                    >Clădiri noi</a
+                  >
+                </li>
+                <li class="justify" onclick="showBurgerIpoteca()">
+                  <a href="#" class="menu__link">Ipotecă</a>
+                  <img src="./img/header/arrow-green.svg" alt="arrow-green" />
+                </li>
+                <li class="justify" onclick="showBurgerService()">
+                  <a href="#" class="menu__link">Servicii</a>
+                  <img src="./img/header/arrow-green.svg" alt="arrow-green" />
+                </li>
+                <li>
+                  <a href="partner-page.html" class="menu__link">Parteneri</a>
+                </li>
+                <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
+                <li><a href="blog-page.html" class="menu__link">Blog</a></li>
+                <div class="connection__login align-center">
+                  <img src="img/header/login.svg" alt="login" />
+                  <span class="ml-20">Autentificare sau înregistrare</span>
+                </div>
+              </ul>
+            </nav>
+            <nav id="mySidenavIpoteca" class="menu__body_burger sidenav">
+              <span class="closebtn" onclick="closeBurgerIpoteca()"
+                >&times;</span
+              >
+              <ul class="menu__list_burger">
+                <li>
+                  <a href="buy-page.html" class="menu__link">Calculator</a>
+                </li>
+              </ul>
+            </nav>
+            <nav id="mySidenavService" class="menu__body_burger sidenav">
+              <span class="closebtn" onclick="closeBurgerService()"
+                >&times;</span
+              >
+              <ul class="menu__list_burger">
+                <li>
+                  <a href="buy-page.html" class="menu__link">Servicii</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </header>
@@ -141,7 +198,7 @@
                 </div>
               </div>
             </a>
-            <a href="rent-page.html"  class="filters__item filters__item2">
+            <a href="rent-page.html" class="filters__item filters__item2">
               <div class="filters__text">
                 <h3 class="filters__title">Închiriază</h3>
                 <p>
@@ -188,7 +245,9 @@
             <div class="category__list category__slider">
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -201,7 +260,9 @@
 
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -213,7 +274,9 @@
               </div>
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -225,7 +288,9 @@
               </div>
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -237,7 +302,9 @@
               </div>
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -249,7 +316,9 @@
               </div>
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -261,7 +330,9 @@
               </div>
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -273,7 +344,9 @@
               </div>
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -283,7 +356,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -312,7 +384,9 @@
             <div class="category__list category__slider">
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -325,7 +399,9 @@
 
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -337,7 +413,9 @@
               </div>
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -349,7 +427,9 @@
               </div>
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -361,7 +441,9 @@
               </div>
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -373,7 +455,9 @@
               </div>
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -385,7 +469,9 @@
               </div>
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -397,7 +483,9 @@
               </div>
               <div class="category__item">
                 <div class="category__img">
-                  <a href="product-page.html"><img src="./img/main/category.png" alt="category" /></a>
+                  <a href="product-page.html"
+                    ><img src="./img/main/category.png" alt="category"
+                  /></a>
                 </div>
                 <div class="category__content">
                   <div class="category__price">1 0000 $</div>
@@ -407,7 +495,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -461,7 +548,9 @@
             <ul class="newProducts__list newProducts__slider">
               <li class="newProducts__item">
                 <div class="newProducts__img">
-                  <a href="news-page.html">  <img src="./img/main/newProduct.jpg" alt="newProduct" /></a>
+                  <a href="news-page.html">
+                    <img src="./img/main/newProduct.jpg" alt="newProduct"
+                  /></a>
                 </div>
                 <div class="newProducts__list_title">Categorie</div>
                 <div class="newProducts__text">
@@ -471,7 +560,9 @@
               </li>
               <li class="newProducts__item">
                 <div class="newProducts__img">
-                  <a href="news-page.html">  <img src="./img/main/newProduct.jpg" alt="newProduct" /></a>
+                  <a href="news-page.html">
+                    <img src="./img/main/newProduct.jpg" alt="newProduct"
+                  /></a>
                 </div>
                 <div class="newProducts__list_title">Categorie</div>
                 <div class="newProducts__text">
@@ -481,7 +572,9 @@
               </li>
               <li class="newProducts__item">
                 <div class="newProducts__img">
-                  <a href="news-page.html">  <img src="./img/main/newProduct.jpg" alt="newProduct" /></a>
+                  <a href="news-page.html">
+                    <img src="./img/main/newProduct.jpg" alt="newProduct"
+                  /></a>
                 </div>
                 <div class="newProducts__list_title">Categorie</div>
                 <div class="newProducts__text">
@@ -491,7 +584,9 @@
               </li>
               <li class="newProducts__item">
                 <div class="newProducts__img">
-                  <a href="news-page.html">  <img src="./img/main/newProduct.jpg" alt="newProduct" /></a>
+                  <a href="news-page.html">
+                    <img src="./img/main/newProduct.jpg" alt="newProduct"
+                  /></a>
                 </div>
                 <div class="newProducts__list_title">Categorie</div>
                 <div class="newProducts__text">
@@ -501,7 +596,9 @@
               </li>
               <li class="newProducts__item">
                 <div class="newProducts__img">
-                  <a href="news-page.html">  <img src="./img/main/newProduct.jpg" alt="newProduct" /></a>
+                  <a href="news-page.html">
+                    <img src="./img/main/newProduct.jpg" alt="newProduct"
+                  /></a>
                 </div>
                 <div class="newProducts__list_title">Categorie</div>
                 <div class="newProducts__text">
@@ -522,13 +619,19 @@
           <div class="footer__nav nav">
             <ul class="nav__list">
               <li><a href="buy-page.html" class="menu__link">Cumpărare</a></li>
-              <li><a href="rent-page.html" class="menu__link">Închiriere</a></li>
-              <li><a href="new-build-page.html" class="menu__link">Clădiri noi</a></li>
+              <li>
+                <a href="rent-page.html" class="menu__link">Închiriere</a>
+              </li>
+              <li>
+                <a href="new-build-page.html" class="menu__link">Clădiri noi</a>
+              </li>
               <li><a href="" class="menu__link">Ipotecă</a></li>
             </ul>
             <ul class="nav__list">
               <li><a href="" class="menu__link">Servicii</a></li>
-              <li><a href="partner-page.html" class="menu__link">Parteneri</a></li>
+              <li>
+                <a href="partner-page.html" class="menu__link">Parteneri</a>
+              </li>
               <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
               <li><a href="blog-page.html" class="menu__link">Blog</a></li>
             </ul>
@@ -559,6 +662,5 @@
     <script src="./js/slick.min.js"></script>
     <script src="js/sliders.js"></script>
     <script src="js/script.js"></script>
-
   </body>
 </html>
