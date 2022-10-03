@@ -202,7 +202,7 @@ $fontFamily: "DM Sans", sans-serif;
   padding-left: 20px;
 }
 
-.check-bock{
+.check-box{
   input[type="radio"], input[type="checkbox"] {
     width: 0;
     height: 0;
@@ -226,6 +226,10 @@ $fontFamily: "DM Sans", sans-serif;
   input[type="radio"]:checked:after, input[type="checkbox"]:checked:after {
     background-color: $green;
     border: none;
+  }
+
+  label{
+
   }
 }
 //
