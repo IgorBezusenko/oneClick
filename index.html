@@ -1,724 +1,813 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="./css/style.css"/>
     <title>Home Page</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="header">
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
         <div class="header__content">
-          <div class="header__connection connection _container">
-            <div class="connection__city">
-              <div class="connection-block connection__city-modalShow">
-                <img src="./img/header/Subtract.svg" alt="location" />
-                <span>Chișinău</span>
-                <img src="./img/header/vector_down.svg" alt="vector" />
-              </div>
-              <div class="connection__city-bg-modal">
-                <div class="connection__city-modal">
-                  <div class="connection__city-input">
-                    <label for="connection__city-input"> </label>
-                    <input
-                      id="connection__city-input"
-                      type="text"
-                      placeholder="Indică orașul"
-                    />
-                    <img
-                      src="./img/main/close.svg"
-                      alt="close"
-                      class="connection__city-close"
-                    />
-                  </div>
-                  <ul>
-                    <li>Chișinău</li>
-                    <li>Bălți</li>
-                    <li>Cahul</li>
-                    <li>Chișinău</li>
-                    <li>Bălți</li>
-                    <li>Cahul</li>
-                    <li>Chișinău</li>
-                    <li>Bălți</li>
-                    <li>Cahul</li>
-                    <li>Chișinău</li>
-                    <li>Bălți</li>
-                    <li>Cahul</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="connection__auth">
-              <div class="connection__phone connection-block">
-                <img src="./img/header/phone.svg" alt="phone" /><span
-                  >+373 69 123 123</span
-                >
-              </div>
-              <div class="connection__login connection-block">
-                <img src="img/header/login.svg" alt="login" />
-                <span>Autentificare sau înregistrare</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="header__menu menu _container">
-            <div class="menu__logo logo">
-              <a href="index.html">
-                <img src="./img/header/logo_header.svg" alt="logo"
-              /></a>
-            </div>
-            <nav class="menu__body">
-              <ul class="menu__list">
-                <li>
-                  <a href="buy-page.html" class="menu__link">Cumpărare</a>
-                </li>
-                <li>
-                  <a href="rent-page.html" class="menu__link">Închiriere</a>
-                </li>
-                <li>
-                  <a href="new-build-page.html" class="menu__link"
-                    >Clădiri noi</a
-                  >
-                </li>
-                <li onclick="showModalIpoteca()" class="menu__link">
-                  Ipotecă
-                </li>
-                <li class="menu__link" onclick="showModalService()">
-
-                  Servicii
-                </li>
-                <li>
-                  <a href="partner-page.html" class="menu__link">Parteneri</a>
-                </li>
-                <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
-                <li><a href="blog-page.html" class="menu__link">Blog</a></li>
-              </ul>
-            </nav>
-            <div class="menu__icon icon-menu" onclick="showBurgerMenu()">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div id="modalIpoteca" class="modal__wrapper">
-              <div class="modal">
-                <div class="justify align-center">
-                  <h3 class="modal__title title">Ipotecă</h3>
-                  <span onclick="closeModalIpoteca()" class="modal__close"
-                    >&times;</span
-                  >
-                </div>
-                <div class="modal__content">
-                  <a href="calculator-page.html">
-                    <div class="service">
-                      <div class="service__img">
-                        <img src="./img/main/calc.svg" alt="calc" />
-                      </div>
-                      <div class="service__title">Calculator ipotecă</div>
-                      <div class="service__text">Calculează</div>
+            <div class="header__connection connection _container">
+                <div class="connection__city">
+                    <div class="connection-block connection__city-modalShow">
+                        <img src="./img/header/Subtract.svg" alt="location"/>
+                        <span>Chișinău</span>
+                        <img src="./img/header/vector_down.svg" alt="vector"/>
                     </div>
-                  </a>
+                    <div class="connection__city-bg-modal">
+                        <div class="connection__city-modal">
+                            <div class="connection__city-input">
+                                <label for="connection__city-input"> </label>
+                                <input
+                                        id="connection__city-input"
+                                        type="text"
+                                        placeholder="Indică orașul"
+                                />
+                                <img
+                                        src="./img/main/close.svg"
+                                        alt="close"
+                                        class="connection__city-close"
+                                />
+                            </div>
+                            <ul>
+                                <li>Chișinău</li>
+                                <li>Bălți</li>
+                                <li>Cahul</li>
+                                <li>Chișinău</li>
+                                <li>Bălți</li>
+                                <li>Cahul</li>
+                                <li>Chișinău</li>
+                                <li>Bălți</li>
+                                <li>Cahul</li>
+                                <li>Chișinău</li>
+                                <li>Bălți</li>
+                                <li>Cahul</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <div class="connection__auth">
+                    <div class="connection__phone connection-block">
+                        <img src="./img/header/phone.svg" alt="phone"/><span
+                    >+373 69 123 123</span
+                    >
+                    </div>
+                    <div onclick="showModalLogin()" class="connection__login connection-block">
+                        <img src="img/header/login.svg" alt="login"/>
+                        <span>Autentificare sau înregistrare</span>
+                    </div>
+                </div>
             </div>
 
-            <div id="modalService" class="modal__wrapper">
-              <div class="modal">
-                <div class="justify align-center">
-                  <h3 class="modal__title title">Servicii</h3>
-                  <span onclick="closeModalService()" class="modal__close"
-                    >&times;</span
-                  >
+            <div class="header__menu menu _container">
+                <div class="menu__logo logo">
+                    <a href="index.html">
+                        <img src="./img/header/logo_header.svg" alt="logo"
+                        /></a>
+                </div>
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li>
+                            <a href="buy-page.html" class="menu__link">Cumpărare</a>
+                        </li>
+                        <li>
+                            <a href="rent-page.html" class="menu__link">Închiriere</a>
+                        </li>
+                        <li>
+                            <a href="new-build-page.html" class="menu__link"
+                            >Clădiri noi</a
+                            >
+                        </li>
+                        <li onclick="showModalIpoteca()" class="menu__link">
+                            Ipotecă
+                        </li>
+                        <li class="menu__link" onclick="showModalService()">
+
+                            Servicii
+                        </li>
+                        <li>
+                            <a href="partner-page.html" class="menu__link">Parteneri</a>
+                        </li>
+                        <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
+                        <li><a href="blog-page.html" class="menu__link">Blog</a></li>
+                    </ul>
+                </nav>
+                <div class="menu__icon icon-menu" onclick="showBurgerMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="modalIpoteca" class="modal__wrapper">
+                    <div class="modal">
+                        <div class="justify align-center">
+                            <h3 class="modal__title title">Ipotecă</h3>
+                            <span onclick="closeModalIpoteca()" class="modal__close"
+                            >&times;</span
+                            >
+                        </div>
+                        <div class="modal__content">
+                            <a href="calculator-page.html">
+                                <div class="service">
+                                    <div class="service__img">
+                                        <img src="./img/main/calc.svg" alt="calc"/>
+                                    </div>
+                                    <div class="service__title">Calculator ipotecă</div>
+                                    <div class="service__text">Calculează</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="modal__content">
-                  <a href="buy-page.html">
-                    <div class="service">
-                      <div class="service__img">
-                        <img src="./img/main/house-circle.svg" alt="home" />
-                      </div>
-                      <div class="service__title">Cumpărare și vânzare</div>
-                      <div class="service__text">123 557 oferte</div>
+                <div id="modalService" class="modal__wrapper">
+                    <div class="modal">
+                        <div class="justify align-center">
+                            <h3 class="modal__title title">Servicii</h3>
+                            <span onclick="closeModalService()" class="modal__close"
+                            >&times;</span
+                            >
+                        </div>
+
+                        <div class="modal__content">
+                            <a href="buy-page.html">
+                                <div class="service">
+                                    <div class="service__img">
+                                        <img src="./img/main/house-circle.svg" alt="home"/>
+                                    </div>
+                                    <div class="service__title">Cumpărare și vânzare</div>
+                                    <div class="service__text">123 557 oferte</div>
+                                </div>
+                            </a>
+                            <a href="rent-page.html">
+                                <div class="service">
+                                    <div class="service__img">
+                                        <img src="./img/main/sofa.svg" alt="sofa"/>
+                                    </div>
+                                    <div class="service__title">Chirie</div>
+                                    <div class="service__text">50 222 oferte</div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                  </a>
-                  <a href="rent-page.html">
-                    <div class="service">
-                      <div class="service__img">
-                        <img src="./img/main/sofa.svg" alt="sofa" />
-                      </div>
-                      <div class="service__title">Chirie</div>
-                      <div class="service__text">50 222 oferte</div>
-                    </div>
-                  </a>
                 </div>
-              </div>
-            </div>
-            <nav id="mySidenav" class="menu__body_burger sidenav">
-              <span class="closebtn" onclick="closeBurgerMenu()">&times;</span>
-              <ul class="menu__list_burger">
-                <li>
-                  <a href="buy-page.html" class="menu__link">Cumpărare</a>
-                </li>
-                <li>
-                  <a href="rent-page.html" class="menu__link">Închiriere</a>
-                </li>
-                <li>
-                  <a href="new-build-page.html" class="menu__link"
-                    >Clădiri noi</a
-                  >
-                </li>
-                <li class="justify" onclick="showBurgerIpoteca()">
-                  <a href="#" class="menu__link">Ipotecă</a>
-                  <img src="./img/header/arrow-green.svg" alt="arrow-green" />
-                </li>
-                <li class="justify" onclick="showBurgerService()">
-                  <a href="#" class="menu__link">Servicii</a>
-                  <img src="./img/header/arrow-green.svg" alt="arrow-green" />
-                </li>
-                <li>
-                  <a href="partner-page.html" class="menu__link">Parteneri</a>
-                </li>
-                <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
-                <li><a href="blog-page.html" class="menu__link">Blog</a></li>
-                <div class="connection__login align-center">
-                  <img src="img/header/login.svg" alt="login" />
-                  <span class="ml-20">Autentificare sau înregistrare</span>
-                </div>
-              </ul>
-            </nav>
-            <nav id="mySidenavIpoteca" class="menu__body_burger sidenav">
+                <nav id="mySidenav" class="menu__body_burger sidenav">
+                    <span class="closebtn" onclick="closeBurgerMenu()">&times;</span>
+                    <ul class="menu__list_burger">
+                        <li>
+                            <a href="buy-page.html" class="menu__link">Cumpărare</a>
+                        </li>
+                        <li>
+                            <a href="rent-page.html" class="menu__link">Închiriere</a>
+                        </li>
+                        <li>
+                            <a href="new-build-page.html" class="menu__link"
+                            >Clădiri noi</a
+                            >
+                        </li>
+                        <li class="justify" onclick="showBurgerIpoteca()">
+                            <a href="#" class="menu__link">Ipotecă</a>
+                            <img src="./img/header/arrow-green.svg" alt="arrow-green"/>
+                        </li>
+                        <li class="justify" onclick="showBurgerService()">
+                            <a href="#" class="menu__link">Servicii</a>
+                            <img src="./img/header/arrow-green.svg" alt="arrow-green"/>
+                        </li>
+                        <li>
+                            <a href="partner-page.html" class="menu__link">Parteneri</a>
+                        </li>
+                        <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
+                        <li><a href="blog-page.html" class="menu__link">Blog</a></li>
+                        <div class="connection__login align-center">
+                            <img src="img/header/login.svg" alt="login"/>
+                            <span class="ml-20">Autentificare sau înregistrare</span>
+                        </div>
+                    </ul>
+                </nav>
+                <nav id="mySidenavIpoteca" class="menu__body_burger sidenav">
               <span class="closebtn" onclick="closeBurgerIpoteca()"
-                >&times;</span
+              >&times;</span
               >
-              <ul class="menu__list_burger">
-                <li>
-                  <a href="buy-page.html" class="menu__link">Calculator</a>
-                </li>
-              </ul>
-            </nav>
-            <nav id="mySidenavService" class="menu__body_burger sidenav">
+                    <ul class="menu__list_burger">
+                        <li>
+                            <a href="buy-page.html" class="menu__link">Calculator</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav id="mySidenavService" class="menu__body_burger sidenav">
               <span class="closebtn" onclick="closeBurgerService()"
-                >&times;</span
+              >&times;</span
               >
-              <ul class="menu__list_burger">
-                <li>
-                  <a href="buy-page.html" class="menu__link">Servicii</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </header>
-
-      <main class="main">
-        <div class="_container">
-          <div class="activeBanner">
-            <a href="add-product.html" class="activeBanner__add">
-              <div class="activeBanner__add_img">
-                <img src="./img/main/home-work.svg" alt="home-work" />
-              </div>
-
-              <div class="activeBanner__text">
-                <img src="./img/main/plus.svg" alt="plus" /> Adaugă un anunț
-              </div>
-            </a>
-            <div class="activeBanner__login">
-              <p>
-                Autentifică-te pentru a avea acces la toate funcțiile de pe site
-              </p>
-              <button class="activeBanner__login_btn btnRadius">
-                Autentificare
-              </button>
+                    <ul class="menu__list_burger">
+                        <li>
+                            <a href="buy-page.html" class="menu__link">Servicii</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-          </div>
         </div>
+    </header>
 
-        <div class="_container">
-          <div class="filters">
-            <a href="buy-page.html" class="filters__item filters__item1">
-              <div class="filters__text">
-                <h3 class="filters__title">Cumpără</h3>
-                <p>
-                  <span>Anunţuri</span> <br />
-                  500
-                </p>
-              </div>
-              <div class="filters__img">
-                <div class="filters__arrow">
-                  <img src="./img/main/arrow.svg" alt="arrow" />
+    <main class="main">
+
+        <div id="auth_login" class="auth__wrapper">
+            <div class="auth">
+                <div class="auth__close">
+                    <span onclick="closeModalLogin()">&times;</span>
                 </div>
-                <div class="filters__picture">
-                  <img src="img/main/house-circle.svg" alt="house-circle" />
+                <div class="auth__content">
+                    <div class="auth__title"><span>Conectați-vă la</span> <a href="index.html">
+                        <img src="./img/header/logo_header.svg" alt="logo"
+                        /></a></div>
+                    <div class="auth__btn bg-green"><img src="./img/auth/google.svg" alt="google">Conectați-vă prin Google</div>
+                    <div class="auth__btn bg-blue"><img src="./img/auth/facebook.svg" alt="facebook">Conectați-vă prin Facebook
+                    </div>
+                    <hr>
+                    <div class="auth__input">
+                        <label for="auth_login_input">
+                            <img src="./img/auth/bx_user.svg" alt="user">
+                        </label>
+                        <input placeholder="Nume utilizator sau email" id="auth_login_input" name="auth_login_input" type="text">
+                    </div>
+                    <div class="auth__input">
+                        <label for="auth_password">
+                            <img src="./img/auth/password.svg" alt="password">
+                        </label>
+                        <input placeholder="Parola" id="auth_password" name="auth_password" type="text">
+                    </div>
+                    <div class="auth__text color-blue fw-500 mb-20">
+                        Ați uitat parola?
+                    </div>
+                    <div class="auth__btn bg-black text-center">
+                        Conectați-vă</div>
+                    <div class="auth__text text-center" >
+                        Nu aveți un cont?
+                        <span onclick="showModalRegistration()" class="color-blue fw-500"> Înregistrați-vă!</span></div>
+
                 </div>
-              </div>
-            </a>
-            <a href="rent-page.html" class="filters__item filters__item2">
-              <div class="filters__text">
-                <h3 class="filters__title">Închiriază</h3>
-                <p>
-                  <span>Anunţuri</span> <br />
-                  500
-                </p>
-              </div>
-              <div class="filters__img">
-                <div class="filters__arrow">
-                  <img src="./img/main/arrow.svg" alt="arrow" />
-                </div>
-                <div class="filters__picture">
-                  <img src="img/main/sofa.svg" alt="sofa" />
-                </div>
-              </div>
-            </a>
-            <a href="new-build-page.html" class="filters__item filters__item3">
-              <div class="filters__text">
-                <h3 class="filters__title">Clădiri noi</h3>
-                <p>
-                  <span>Anunţuri</span> <br />
-                  500
-                </p>
-              </div>
-              <div class="filters__img">
-                <div class="filters__arrow">
-                  <img src="./img/main/arrow.svg" alt="arrow" />
-                </div>
-                <div class="filters__picture">
-                  <img src="img/main/build.svg" alt="build" />
-                </div>
-              </div>
-            </a>
-          </div>
+            </div>
         </div>
+        <div id="auth_registration" class="auth__wrapper">
+            <div class="auth">
+                <div class="auth__close">
+                    <span onclick="closeModalRegistration()">&times;</span>
+                </div>
+                <div class="auth__content">
+                    <div class="auth__title-registration"> <a href="index.html">
+                        <img src="./img/header/logo_header.svg" alt="logo"
+                        /></a>
+                    </div>
+                    <div class="auth__title-registration">
+                        <span>Înregistrare</span>
+                    </div>
 
+                    <div class="auth__btn bg-green"><img src="./img/auth/google.svg" alt="google">Conectați-vă prin Google</div>
+                    <div class="auth__btn bg-blue"><img src="./img/auth/facebook.svg" alt="facebook">Conectați-vă prin Facebook
+                    </div>
+                    <hr>
+                    <div class="auth__input">
+                        <label for="auth_registration_email">
+                            <img src="./img/auth/email.svg" alt="email">
+                        </label>
+                        <input placeholder="Email" id="auth_registration_email" name="auth_registration_email" type="text">
+                    </div>
+                    <div class="auth__input">
+                        <label for="auth_registration_login">
+                            <img src="./img/auth/bx_user.svg" alt="user">
+                        </label>
+                        <input placeholder="Nume utilizator sau email" id="auth_registration_login" name="auth_registration_login" type="text">
+                    </div>
+                    <div class="auth__input">
+                        <label for="auth_registration_password">
+                            <img src="./img/auth/password.svg" alt="password">
+                        </label>
+                        <input placeholder="Parola" id="auth_registration_password" name="auth_registration_password" type="text">
+                    </div>
+                    <div class="auth__text  mb-20 check-bock pl-20">
+                        <input type="checkbox" name="auth_registration_agree" id="auth_registration_agree">
+                        <label for="auth_registration_agree">
+                            Sunt de acord cu <span class="border-bottom">termenii de utilizare și politica de confidențialitate</span>
+                        </label>
+                    </div>
+                    <div class="auth__btn bg-black text-center">
+                        Înregistrare</div>
+                    <div class="auth__text text-center" >
+                        Deja aveți un cont?
+                       <span onclick="showModalLogin()" class="color-blue fw-500"> Conectați-vă!</span></div>
+
+                </div>
+            </div>
+        </div>
         <div class="_container">
-          <div class="category">
-            <div class="category__header">
-              <h3 class="category__title title">Categorie</h3>
-              <button class="btn-link btn-primary">Toate anunțurile</button>
-            </div>
+            <div class="activeBanner">
+                <a href="add-product.html" class="activeBanner__add">
+                    <div class="activeBanner__add_img">
+                        <img src="./img/main/home-work.svg" alt="home-work"/>
+                    </div>
 
-            <div class="category__list category__slider">
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
+                    <div class="activeBanner__text">
+                        <img src="./img/main/plus.svg" alt="plus"/> Adaugă un anunț
+                    </div>
+                </a>
+                <div class="activeBanner__login">
+                    <p>
+                        Autentifică-te pentru a avea acces la toate funcțiile de pe site
+                    </p>
+                    <button onclick="showModalLogin()" class="activeBanner__login_btn btnRadius">
+                        Autentificare
+                    </button>
                 </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
-                </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
-                </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
-                </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
-                </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
-                </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
-                </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
-                </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
 
         <div class="_container">
-          <div class="newBuildBanner">
-            <div class="newBuildBanner__content">
-              <h1 class="newBuildBanner__title">
-                Clădiri <br />
-                <span>NOI.</span>
-              </h1>
-              <button class="newBuildBanner__btn btn-link btn-dark">
-                Vezi aici
-              </button>
+            <div class="filters">
+                <a href="buy-page.html" class="filters__item filters__item1">
+                    <div class="filters__text">
+                        <h3 class="filters__title">Cumpără</h3>
+                        <p>
+                            <span>Anunţuri</span> <br/>
+                            500
+                        </p>
+                    </div>
+                    <div class="filters__img">
+                        <div class="filters__arrow">
+                            <img src="./img/main/arrow.svg" alt="arrow"/>
+                        </div>
+                        <div class="filters__picture">
+                            <img src="img/main/house-circle.svg" alt="house-circle"/>
+                        </div>
+                    </div>
+                </a>
+                <a href="rent-page.html" class="filters__item filters__item2">
+                    <div class="filters__text">
+                        <h3 class="filters__title">Închiriază</h3>
+                        <p>
+                            <span>Anunţuri</span> <br/>
+                            500
+                        </p>
+                    </div>
+                    <div class="filters__img">
+                        <div class="filters__arrow">
+                            <img src="./img/main/arrow.svg" alt="arrow"/>
+                        </div>
+                        <div class="filters__picture">
+                            <img src="img/main/sofa.svg" alt="sofa"/>
+                        </div>
+                    </div>
+                </a>
+                <a href="new-build-page.html" class="filters__item filters__item3">
+                    <div class="filters__text">
+                        <h3 class="filters__title">Clădiri noi</h3>
+                        <p>
+                            <span>Anunţuri</span> <br/>
+                            500
+                        </p>
+                    </div>
+                    <div class="filters__img">
+                        <div class="filters__arrow">
+                            <img src="./img/main/arrow.svg" alt="arrow"/>
+                        </div>
+                        <div class="filters__picture">
+                            <img src="img/main/build.svg" alt="build"/>
+                        </div>
+                    </div>
+                </a>
             </div>
-          </div>
         </div>
 
         <div class="_container">
-          <div class="category">
-            <div class="category__header">
-              <h3 class="category__title title">Categorie</h3>
-              <button class="btn-link btn-primary">Toate anunțurile</button>
-            </div>
+            <div class="category">
+                <div class="category__header">
+                    <h3 class="category__title title">Categorie</h3>
+                    <button class="btn-link btn-primary"><a href="buy-page.html">Toate anunțurile</a></button>
+                </div>
 
-            <div class="category__list category__slider">
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
-                </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
+                <div class="category__list category__slider">
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
 
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
-                </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
-                </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
-                </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
-                </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
-                </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
-              <div class="category__item">
-                <div class="category__img">
-                  <a href="product-page.html"
-                    ><img src="./img/main/category.png" alt="category"
-                  /></a>
-                </div>
-                <div class="category__content">
-                  <div class="category__price">1 0000 $</div>
-                  <div class="category__text">
-                    1 cam. / 45.6 m2 / etaj 5 <br />
-                    <span>str. Stefan cel Mare 34/2</span>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
 
         <div class="_container">
-          <div class="blockLinks">
-            <div class="blockLinks__calculator calculatorLink">
-              <div class="calculatorLink__title">
-                Calculează <br />
-                ipoteca
-              </div>
-              <button class="calculatorLink__btn btn-link btn-dark">
-                Vezi aici
-              </button>
+            <div class="newBuildBanner">
+                <div class="newBuildBanner__content">
+                    <h1 class="newBuildBanner__title">
+                        Clădiri <br/>
+                        <span>NOI.</span>
+                    </h1>
+                    <button class="newBuildBanner__btn btn-link btn-dark">
+                        <a href="new-build-page.html">Vezi aici</a>
+                    </button>
+                </div>
             </div>
-
-            <div class="blockLinks__services services">
-              <div class="services__title">Serviciile OneClick</div>
-              <ul class="services__list">
-                <li>
-                  <span>01</span>
-                  <p>cumpărare</p>
-                </li>
-                <li>
-                  <span>02</span>
-                  <p>vânzare</p>
-                </li>
-                <li>
-                  <span>03</span>
-                  <p>chirie</p>
-                </li>
-                <li>
-                  <span class="last04">04</span>
-                  <p>
-                    consultanță<br />
-                    imobiliară
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
 
         <div class="_container">
-          <div class="newProducts">
-            <div class="newProducts__header">
-              <h3 class="newProducts__title title">Noutăți</h3>
-              <button class="btn-link btn-primary">Toate anunțurile</button>
+            <div class="category">
+                <div class="category__header">
+                    <h3 class="category__title title">Categorie</h3>
+                    <button class="btn-link btn-primary"><a href="buy-page.html">Toate anunțurile</a></button>
+                </div>
+
+                <div class="category__list category__slider">
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category__img">
+                            <a href="product-page.html"
+                            ><img src="./img/main/category.png" alt="category"
+                            /></a>
+                        </div>
+                        <div class="category__content">
+                            <div class="category__price">1 0000 $</div>
+                            <div class="category__text">
+                                1 cam. / 45.6 m2 / etaj 5 <br/>
+                                <span>str. Stefan cel Mare 34/2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <ul class="newProducts__list newProducts__slider">
-              <li class="newProducts__item">
-                <div class="newProducts__img">
-                  <a href="news-page.html">
-                    <img src="./img/main/newProduct.jpg" alt="newProduct"
-                  /></a>
-                </div>
-                <div class="newProducts__list_title">Categorie</div>
-                <div class="newProducts__text">
-                  Cum să îți găsești casa visurilor mai rapid și eficient
-                </div>
-                <div class="newProducts__date">01 ianuarie 2022</div>
-              </li>
-              <li class="newProducts__item">
-                <div class="newProducts__img">
-                  <a href="news-page.html">
-                    <img src="./img/main/newProduct.jpg" alt="newProduct"
-                  /></a>
-                </div>
-                <div class="newProducts__list_title">Categorie</div>
-                <div class="newProducts__text">
-                  Cum să îți găsești casa visurilor mai rapid și eficient
-                </div>
-                <div class="newProducts__date">01 ianuarie 2022</div>
-              </li>
-              <li class="newProducts__item">
-                <div class="newProducts__img">
-                  <a href="news-page.html">
-                    <img src="./img/main/newProduct.jpg" alt="newProduct"
-                  /></a>
-                </div>
-                <div class="newProducts__list_title">Categorie</div>
-                <div class="newProducts__text">
-                  Cum să îți găsești casa visurilor mai rapid și eficient
-                </div>
-                <div class="newProducts__date">01 ianuarie 2022</div>
-              </li>
-              <li class="newProducts__item">
-                <div class="newProducts__img">
-                  <a href="news-page.html">
-                    <img src="./img/main/newProduct.jpg" alt="newProduct"
-                  /></a>
-                </div>
-                <div class="newProducts__list_title">Categorie</div>
-                <div class="newProducts__text">
-                  Cum să îți găsești casa visurilor mai rapid și eficient
-                </div>
-                <div class="newProducts__date">01 ianuarie 2022</div>
-              </li>
-              <li class="newProducts__item">
-                <div class="newProducts__img">
-                  <a href="news-page.html">
-                    <img src="./img/main/newProduct.jpg" alt="newProduct"
-                  /></a>
-                </div>
-                <div class="newProducts__list_title">Categorie</div>
-                <div class="newProducts__text">
-                  Cum să îți găsești casa visurilor mai rapid și eficient
-                </div>
-                <div class="newProducts__date">01 ianuarie 2022</div>
-              </li>
-            </ul>
-          </div>
         </div>
-      </main>
 
-      <footer class="footer">
+        <div class="_container">
+            <div class="blockLinks">
+                <div class="blockLinks__calculator calculatorLink">
+                    <div class="calculatorLink__title">
+                        Calculează <br/>
+                        ipoteca
+                    </div>
+                    <button class="calculatorLink__btn btn-link btn-dark">
+                        Vezi aici
+                    </button>
+                </div>
+
+                <div class="blockLinks__services services">
+                    <div class="services__title">Serviciile OneClick</div>
+                    <ul class="services__list">
+                        <li>
+                            <span>01</span>
+                            <p>cumpărare</p>
+                        </li>
+                        <li>
+                            <span>02</span>
+                            <p>vânzare</p>
+                        </li>
+                        <li>
+                            <span>03</span>
+                            <p>chirie</p>
+                        </li>
+                        <li>
+                            <span class="last04">04</span>
+                            <p>
+                                consultanță<br/>
+                                imobiliară
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="_container">
+            <div class="newProducts">
+                <div class="newProducts__header">
+                    <h3 class="newProducts__title title">Noutăți</h3>
+                    <button class="btn-link btn-primary"><a href="news-page.html">Toate anunțurile</a></button>
+                </div>
+
+                <ul class="newProducts__list newProducts__slider">
+                    <li class="newProducts__item">
+                        <div class="newProducts__img">
+                            <a href="open-news-page.html">
+                                <img src="./img/main/newProduct.jpg" alt="newProduct"
+                                /></a>
+                        </div>
+                        <div class="newProducts__list_title">Categorie</div>
+                        <div class="newProducts__text">
+                            Cum să îți găsești casa visurilor mai rapid și eficient
+                        </div>
+                        <div class="newProducts__date">01 ianuarie 2022</div>
+                    </li>
+                    <li class="newProducts__item">
+                        <div class="newProducts__img">
+                            <a href="open-news-page.html">
+                                <img src="./img/main/newProduct.jpg" alt="newProduct"
+                                /></a>
+                        </div>
+                        <div class="newProducts__list_title">Categorie</div>
+                        <div class="newProducts__text">
+                            Cum să îți găsești casa visurilor mai rapid și eficient
+                        </div>
+                        <div class="newProducts__date">01 ianuarie 2022</div>
+                    </li>
+                    <li class="newProducts__item">
+                        <div class="newProducts__img">
+                            <a href="open-news-page.html">
+                                <img src="./img/main/newProduct.jpg" alt="newProduct"
+                                /></a>
+                        </div>
+                        <div class="newProducts__list_title">Categorie</div>
+                        <div class="newProducts__text">
+                            Cum să îți găsești casa visurilor mai rapid și eficient
+                        </div>
+                        <div class="newProducts__date">01 ianuarie 2022</div>
+                    </li>
+                    <li class="newProducts__item">
+                        <div class="newProducts__img">
+                            <a href="open-news-page.html">
+                                <img src="./img/main/newProduct.jpg" alt="newProduct"
+                                /></a>
+                        </div>
+                        <div class="newProducts__list_title">Categorie</div>
+                        <div class="newProducts__text">
+                            Cum să îți găsești casa visurilor mai rapid și eficient
+                        </div>
+                        <div class="newProducts__date">01 ianuarie 2022</div>
+                    </li>
+                    <li class="newProducts__item">
+                        <div class="newProducts__img">
+                            <a href="open-news-page.html">
+                                <img src="./img/main/newProduct.jpg" alt="newProduct"
+                                /></a>
+                        </div>
+                        <div class="newProducts__list_title">Categorie</div>
+                        <div class="newProducts__text">
+                            Cum să îți găsești casa visurilor mai rapid și eficient
+                        </div>
+                        <div class="newProducts__date">01 ianuarie 2022</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
         <div class="footer__content _container">
-          <div class="footer__logo logo">
-            <img src="./img/footer/logo_footer.svg" alt="logo" />
-          </div>
-          <div class="footer__nav nav">
-            <ul class="nav__list">
-              <li><a href="buy-page.html" class="menu__link">Cumpărare</a></li>
-              <li>
-                <a href="rent-page.html" class="menu__link">Închiriere</a>
-              </li>
-              <li>
-                <a href="new-build-page.html" class="menu__link">Clădiri noi</a>
-              </li>
-              <li><a href="" class="menu__link">Ipotecă</a></li>
-            </ul>
-            <ul class="nav__list">
-              <li><a href="" class="menu__link">Servicii</a></li>
-              <li>
-                <a href="partner-page.html" class="menu__link">Parteneri</a>
-              </li>
-              <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
-              <li><a href="blog-page.html" class="menu__link">Blog</a></li>
-            </ul>
-          </div>
-          <div class="footer__social social">
-            <div class="social__message">
-              <a href="" class="social__item"
-                ><img src="./img/footer/facebook.svg" alt="facebook"
-              /></a>
-              <a href="" class="social__item"
-                ><img src="./img/footer/insta.svg" alt="insta"
-              /></a>
-              <a href="" class="social__item"
-                ><img src="./img/footer/twitter.svg" alt="twitter"
-              /></a>
+            <div class="footer__logo logo">
+                <img src="./img/footer/logo_footer.svg" alt="logo"/>
             </div>
-            <div class="social__phone">
-              <img src="./img/footer/phone.svg" alt="phone" /><span
+            <div class="footer__nav nav">
+                <ul class="nav__list">
+                    <li><a href="buy-page.html" class="menu__link">Cumpărare</a></li>
+                    <li>
+                        <a href="rent-page.html" class="menu__link">Închiriere</a>
+                    </li>
+                    <li>
+                        <a href="new-build-page.html" class="menu__link">Clădiri noi</a>
+                    </li>
+                    <li><a href="" class="menu__link">Ipotecă</a></li>
+                </ul>
+                <ul class="nav__list">
+                    <li><a href="" class="menu__link">Servicii</a></li>
+                    <li>
+                        <a href="partner-page.html" class="menu__link">Parteneri</a>
+                    </li>
+                    <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
+                    <li><a href="blog-page.html" class="menu__link">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer__social social">
+                <div class="social__message">
+                    <a href="" class="social__item"
+                    ><img src="./img/footer/facebook.svg" alt="facebook"
+                    /></a>
+                    <a href="" class="social__item"
+                    ><img src="./img/footer/insta.svg" alt="insta"
+                    /></a>
+                    <a href="" class="social__item"
+                    ><img src="./img/footer/twitter.svg" alt="twitter"
+                    /></a>
+                </div>
+                <div class="social__phone">
+                    <img src="./img/footer/phone.svg" alt="phone"/><span
                 >+373 69 123 123</span
-              >
+                >
+                </div>
             </div>
-          </div>
         </div>
-      </footer>
-    </div>
+    </footer>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script src="js/sliders.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="./js/slick.min.js"></script>
+<script src="js/sliders.js"></script>
+<script src="js/script.js"></script>
+</body>
 </html>

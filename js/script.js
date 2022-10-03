@@ -8,10 +8,22 @@ const connection__city_bg_modal = document.querySelector(
 const burger = document.querySelector(".icon-menu");
 const menu__body_burger = document.querySelector(".menu__body_burger");
 
+const mySidenav=document.getElementById("mySidenav")
+const mySidenavIpoteca=document.getElementById("mySidenavIpoteca")
+const mySidenavService=document.getElementById("mySidenavService")
+const modalIpoteca= document.getElementById("modalIpoteca")
+const modalService= document.getElementById("modalService")
+
+const auth_registration= document.getElementById("auth_registration")
+const auth_login= document.getElementById("auth_login")
+
+const overflowHidden = ()=>document.body.style.overflow = "hidden";
+const overflowAuto = ()=>document.body.style.overflow = "auto";
+
 const modalCityShow = () => {
   connection__city.classList.add("active");
   connection__city_bg_modal.classList.add("active");
-  document.body.style.overflow = "hidden";
+  overflowHidden()
 };
 const checkMenuCase = (element) => {
   switch (element) {
@@ -27,7 +39,7 @@ const checkMenuCase = (element) => {
     default: {
       connection__city.classList.remove("active");
       connection__city_bg_modal.classList.remove("active");
-      document.body.style.overflow = "auto";
+      overflowAuto()
       break;
     }
   }
@@ -39,46 +51,67 @@ const modalCityClose = (e) => {
 connection__city_modalShow.addEventListener("click", modalCityShow);
 connection__city_bg_modal.addEventListener("click", modalCityClose);
 
+
 const showBurgerMenu = () => {
   burger.classList.add("active");
   menu__body_burger.classList.add("active");
-  document.getElementById("mySidenav").style.width = "100%";
-  document.body.style.overflow = "hidden";
+  mySidenav.style.width = "100%";
+  overflowHidden()
 };
 const closeBurgerMenu = (e) => {
   burger.classList.remove("active");
   menu__body_burger.classList.remove("active");
-  document.getElementById("mySidenav").style.width = 0;
-  document.body.style.overflow = "auto";
+  mySidenav.style.width = 0;
+  overflowAuto()
 };
 
 const showBurgerIpoteca = () => {
-  document.getElementById("mySidenavIpoteca").style.width = "100%";
+  mySidenavIpoteca.style.width = "100%";
 };
 const closeBurgerIpoteca = (e) => {
-  document.getElementById("mySidenavIpoteca").style.width = 0;
+  mySidenavIpoteca.style.width = 0;
 };
 const showBurgerService = () => {
-  document.getElementById("mySidenavService").style.width = "100%";
+  mySidenavService.style.width = "100%";
 };
 const closeBurgerService = (e) => {
-  document.getElementById("mySidenavService").style.width = 0;
+  mySidenavService.style.width = 0;
 };
 
 const showModalIpoteca = () => {
-  document.getElementById("modalIpoteca").style.marginTop = 0;
-  document.body.style.overflow = "hidden";
+  modalIpoteca.style.marginTop = "0";
+  overflowHidden()
 };
 const closeModalIpoteca = (e) => {
-  document.getElementById("modalIpoteca").style.marginTop = "-100%";
-  document.body.style.overflow = "auto";
+  modalIpoteca.style.marginTop =  "-100vh";
+  overflowAuto()
 };
 
 const showModalService = () => {
-  document.getElementById("modalService").style.marginTop = 0;
-  document.body.style.overflow = "hidden";
+  modalService.style.marginTop = 0;
+  overflowHidden()
 };
 const closeModalService = (e) => {
-  document.getElementById("modalService").style.marginTop = "-100%";
-  document.body.style.overflow = "auto";
+  modalService.style.marginTop = "-100vh";
+  overflowAuto()
+};
+
+//Auth
+const showModalLogin = () => {
+  auth_registration.style.marginTop = "-100vh";
+  auth_login.style.marginTop = "0";
+  overflowHidden()
+};
+const closeModalLogin = (e) => {
+  auth_login.style.marginTop = "-100vh";
+  overflowAuto()
+};
+const showModalRegistration = () => {
+  auth_login.style.marginTop =  "-100vh";
+  auth_registration.style.marginTop =  "0";
+  overflowHidden()
+};
+const closeModalRegistration= (e) => {
+  auth_registration.style.marginTop = "-100vh";
+  overflowAuto()
 };

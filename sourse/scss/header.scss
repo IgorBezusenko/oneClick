@@ -40,7 +40,7 @@
   &__city {
     cursor: pointer;
     position: relative;
-    padding: 12px 5px;
+    padding: 10px 5px;
     &:hover {
       background-color: $grey;
     }
@@ -254,7 +254,7 @@
 
   &__wrapper {
     background-color: $bg-opacity;
-    height: 100%; /* 100% Full-height */
+    height: 100vh; /* 100% Full-height */
     width: 100%; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
@@ -263,7 +263,7 @@
     overflow-x: hidden; /* Disable horizontal scroll */
     padding: 70px; /* Place content 60px from the top */
     transition: 0.5s;
-    margin-top: -100%;
+    margin-top: -100vh;
   }
   &__close {
     font-size: 35px;
@@ -277,6 +277,7 @@
   &__content {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 40px;
   }
 
@@ -306,6 +307,21 @@
       font-size: 14px;
       line-height: 18px;
       color: rgba(16, 23, 37, 0.5);
+    }
+  }
+  @media (max-width: $md2+px) {
+    &__wrapper {
+      padding: 40px; /* Place content 60px from the top */
+
+    }
+    &__content {
+      gap: 20px;
+    }
+  }
+  @media (max-width: $md3+px) {
+
+    &__wrapper {
+      display: none;
     }
   }
 }
@@ -350,7 +366,11 @@
   margin-left: 50px;
   cursor: pointer;
 }
-
+@media (min-width: $md3+px) {
+  .menu__body_burger {
+    display: none;
+  }
+}
 @media (max-width: $md3+px) {
   .menu__body_burger {
     position: fixed;
