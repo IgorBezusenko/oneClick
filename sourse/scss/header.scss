@@ -221,7 +221,7 @@
 .connection__city-bg-modal.active {
   margin-left: 0;
 }
-.connection__city__modal-wrapper.active{
+.connection__city__modal-wrapper.active {
   position: fixed;
   z-index: 9;
   top: 0;
@@ -229,7 +229,6 @@
   width: 100%;
   height: 100%;
   background-color: $bg-opacity;
-
 }
 .connection__city-input {
   display: flex;
@@ -263,11 +262,11 @@
   padding: 43px;
 
   &__wrapper {
-    //background-color: $bg-opacity;
+    background-color: $bg-opacity;
     height: 100vh; /* 100% Full-height */
     width: 100%; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 12; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
     overflow-x: hidden; /* Disable horizontal scroll */
@@ -322,14 +321,12 @@
   @media (max-width: $md2+px) {
     &__wrapper {
       padding: 40px; /* Place content 60px from the top */
-
     }
     &__content {
       gap: 20px;
     }
   }
   @media (max-width: $md3+px) {
-
     &__wrapper {
       display: none;
     }

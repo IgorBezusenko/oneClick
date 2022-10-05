@@ -65,10 +65,8 @@
 
   //
   @media (max-width: $md1 + px) {
-
   }
   @media (max-width: $md2 + px) {
-
   }
   @media (max-width: $md3 + px) {
     &__item {
@@ -76,7 +74,6 @@
       align-items: center;
       border-radius: 0;
       border: none;
-
 
       &:hover {
         background-color: inherit;
@@ -152,7 +149,8 @@
     margin: 0 0 0 30px;
   }
 
-  &__address, &__features {
+  &__address,
+  &__features {
     font-size: 16px;
     line-height: 21px;
   }
@@ -169,22 +167,16 @@
 
   //
   @media (max-width: $md1 + px) {
-
   }
   @media (max-width: $md2 + px) {
-
   }
   @media (max-width: $md3 + px) {
     padding: 0 0 0 5px;
     &__title {
-
       font-size: 14px;
       line-height: 18px;
-
-
     }
     &__views {
-
       margin: 0;
     }
     &__features {
@@ -197,14 +189,13 @@
       display: none;
     }
 
-    &__address, &__features, &__title {
+    &__address,
+    &__features,
+    &__title {
       font-size: 14px;
       line-height: 18px;
     }
-
-
   }
-
 }
 
 .search {
@@ -245,10 +236,18 @@
     li {
       position: relative;
       min-width: 120px;
-      padding: 14px 8px;
+
       border-left: 1px solid $grey;
       border-top: 1px solid $grey;
       border-bottom: 1px solid $grey;
+
+      span {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        padding: 14px 8px;
+        z-index: 2;
+      }
 
       &:after {
         cursor: pointer;
@@ -259,6 +258,7 @@
         height: 8px;
         top: 20px;
         right: 15px;
+        z-index: 1;
       }
     }
   }
@@ -274,10 +274,8 @@
     display: none;
   }
 
-
   //
   @media (max-width: $md1 + px) {
-
     &__list {
       li {
         min-width: 112px;
@@ -297,7 +295,8 @@
     }
   }
   @media (max-width: $md2 + px) {
-    &__list, &__btn {
+    &__list,
+    &__btn {
       display: none;
     }
     &__filter {
@@ -341,40 +340,71 @@
   left: 0;
   z-index: 13;
 
+  width: 100%;
+  //height: 100%;
+  height: auto;
+  min-width: 240px;
 
+  min-height: 180px;
+  padding: 18px 30px;
+  background-color: $white;
+  color: $black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  margin-left: -200vw;
+  transition: 0.3s;
 
   &__raion {
     width: 510px;
-    height: 270px;
+    //height: 270px;
 
-    margin-left: -200vw;
+    .search-modal__content {
+      height: 165px;
+    }
+  }
+
+  &__offerType {
+    //height: 200px;
+
+    .search-modal__content {
+      height: auto;
+    }
+  }
+
+  &__typeBuild {
+    //height: 300px;
+
+    .search-modal__content {
+      height: 190px;
+    }
+  }
+
+  &__roomCount {
+    width: 285px;
+  }
+
+  &__price {
+    width: 290px;
+    //height: 200px;
+    padding: 18px 20px !important;
+  }
+
+  &__filter {
+    width: 510px;
+    left: -330px;
+  }
+
+  &__raion,
+  &__offerType,
+  &__typeBuild,
+  &__roomCount,
+  &__price,
+  &__filter {
     &.active {
       margin-left: 0;
     }
   }
-  &__offerType{
-
-  }
-
-  &__typeBuild{
-
-  }
-
-  &__roomCount{
-
-  }
-  &__pice{
-
-  }
-  &__filter{
-
-  }
-
-  width: 100%;
-  height: 100%;
-  padding: 18px 30px;
-  background-color: $white;
-  color: $black;
 
   &__title {
     font-weight: 700;
@@ -388,14 +418,122 @@
     justify-content: start;
     grid-gap: 10px;
     padding: 10px 0;
-
-    height: 165px;
+    //height: auto;
     overflow-y: scroll;
+
+    &-roomCount {
+      display: grid;
+      grid-template-columns: repeat(3, 70px);
+      grid-gap: 10px;
+    }
+
+    &-price {
+      width: 250px;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 15px;
+    }
+    &-filter {
+      //width: 250px;
+      display: flex;
+      justify-content: flex-start;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item {
+    padding-left: 20px;
+    font-size: 16px !important;
+  }
+
+  &__radio-price {
+    font-size: 16px !important;
+    width: 80px;
+    height: 25px;
+    position: relative;
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 80px;
+      height: 25px;
+      padding: 2px;
+      text-align: center;
+      background-color: $grey;
+      border-radius: 5px;
+    }
+  }
+
+  &__checkbox-roomCount {
+    font-size: 16px !important;
+    width: 70px;
+    height: 35px;
+    position: relative;
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 70px;
+      height: 35px;
+      padding: 5px;
+      border: 1px solid $grey;
+      text-align: center;
+      border-radius: 5px;
+    }
+  }
+  &__radio-filter {
+    font-size: 16px !important;
+    width: 30px;
+    height: 30px;
+    position: relative;
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      padding: 5px 10px;
+      text-align: center;
+      background-color: $grey;
+      border-radius: 5px;
+    }
   }
 
   &__input {
-    padding-left: 20px;
-    font-size: 16px !important;
+    font-size: 16px;
+    line-height: 21px;
+    color: rgba(16, 23, 37, 0.5);
+
+    &-price {
+      width: 210px;
+    }
+
+    &-filter {
+      width: 210px;
+    }
+
+    &-price,
+    &-filter {
+      input {
+        width: 100%;
+        padding: 6px 6px 8px 6px;
+        border: 1px solid $grey;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  &__select-filter {
+    width: 100%;
+    select {
+      width: 100%;
+      background-color: $white !important;
+      border: 1px solid $grey !important;
+    }
   }
 
   &__btn {
@@ -425,16 +563,24 @@
       width: fit-content;
       min-width: 300px;
       height: 270px;
-      margin-left: -200vw;
+      //margin-left: -200vw;
 
       &.active {
         margin-left: 0;
       }
     }
+
+    &__offerType {
+    }
   }
 }
 
-.wrapper-modal__raion {
+.wrapper-modal__raion,
+.wrapper-modal__offerType,
+.wrapper-modal__typeBuild,
+.wrapper-modal__roomCount,
+.wrapper-modal__price,
+.wrapper-modal__filter {
   &.active {
     position: fixed;
     top: 0;
@@ -444,5 +590,20 @@
     background-color: $bg-opacity;
     z-index: 12;
   }
-
 }
+
+//@media (max-width: $md2 + px) {
+//  .search-modal {
+//    display: none;
+//  }
+//  .wrapper-modal__raion,
+//  .wrapper-modal__offerType,
+//  .wrapper-modal__typeBuild,
+//  .wrapper-modal__roomCount,
+//  .wrapper-modal__price,
+//  .wrapper-modal__filter {
+//    &.active {
+//      display: none;
+//    }
+//  }
+//}

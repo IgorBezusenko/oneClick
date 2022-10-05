@@ -172,45 +172,46 @@ $fontFamily: "DM Sans", sans-serif;
   }
 }
 
-.bg-green{
+.bg-green {
   background-color: $green;
 }
-.bg-blue{
+.bg-blue {
   background-color: $blue;
 }
-.bg-black{
+.bg-black {
   background-color: $black;
 }
-.color-blue{
+.color-blue {
   color: $blue;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
-.fw-500{
+.fw-500 {
   font-weight: 500;
 }
-.border-bottom{
+.border-bottom {
   border-bottom: 1px solid $black;
-;
 }
-.mb-20{
+.mb-20 {
   margin-bottom: 20px;
 }
-.pl-20{
+.pl-20 {
   padding-left: 20px;
 }
 
-.check-box{
-  input[type="radio"], input[type="checkbox"] {
+.check-box {
+  input[type="radio"],
+  input[type="checkbox"] {
     width: 0;
     height: 0;
     position: relative;
     cursor: pointer;
   }
 
-  input[type="radio"]:after, input[type="checkbox"]:after {
+  input[type="radio"]:after,
+  input[type="checkbox"]:after {
     background-color: inherit;
     border: 1px solid $border-color;
     border-radius: 5px;
@@ -223,13 +224,48 @@ $fontFamily: "DM Sans", sans-serif;
     height: 15px;
   }
 
-  input[type="radio"]:checked:after, input[type="checkbox"]:checked:after {
+  input[type="radio"]:checked:after,
+  input[type="checkbox"]:checked:after {
     background-color: $green;
     border: none;
   }
 
-  label{
+  label {
+    cursor: pointer;
+  }
+}
+.check-box-custom {
+  input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    position: relative;
+    cursor: pointer;
+  }
 
+  input[type="checkbox"]:checked {
+    & + label {
+      cursor: pointer;
+      background-color: $green;
+      color: $white;
+      border: none;
+      padding: 6px;
+    }
+  }
+}
+.radio-custom {
+  input[type="radio"] {
+    width: 0;
+    height: 0;
+    position: relative;
+    cursor: pointer;
+  }
+
+  input[type="radio"]:checked {
+    & + label {
+      cursor: pointer;
+      background-color: $green;
+      color: $white;
+    }
   }
 }
 //
