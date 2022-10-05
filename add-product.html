@@ -1,646 +1,691 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
+  <head>
+    <meta charset="UTF-8" />
     <meta
-            name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="./css/style.css"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Add Product Page</title>
-</head>
-<body>
-<div class="wrapper">
-    <header class="header">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
         <div class="header__content">
-            <div class="header__connection connection _container">
-                <div class="connection__city">
-                    <div class="connection-block connection__city-modalShow">
-                        <img src="./img/header/Subtract.svg" alt="location" />
-                        <span>Chișinău</span>
-                        <img src="./img/header/vector_down.svg" alt="vector" />
-                    </div>
-                    <div class="connection__city__modal-wrapper"></div>
-                    <div class="connection__city-bg-modal">
-                        <div class="connection__city-modal">
-                            <div class="connection__city-input">
-                                <label for="connection__city-input"> </label>
-                                <input
-                                        id="connection__city-input"
-                                        type="text"
-                                        placeholder="Indică orașul"
-                                />
-                                <img
-                                        src="./img/main/close.svg"
-                                        alt="close"
-                                        class="connection__city-close"
-                                />
-                            </div>
-                            <ul>
-                                <li>Chișinău</li>
-                                <li>Bălți</li>
-                                <li>Cahul</li>
-                                <li>Chișinău</li>
-                                <li>Bălți</li>
-                                <li>Cahul</li>
-                                <li>Chișinău</li>
-                                <li>Bălți</li>
-                                <li>Cahul</li>
-                                <li>Chișinău</li>
-                                <li>Bălți</li>
-                                <li>Cahul</li>
-                            </ul>
-                        </div>
-                    </div>
+          <div class="header__connection connection _container">
+            <div class="connection__city">
+              <div class="connection-block connection__city-modalShow">
+                <img src="./img/header/Subtract.svg" alt="location" />
+                <span>Chișinău</span>
+                <img src="./img/header/vector_down.svg" alt="vector" />
+              </div>
+              <div class="connection__city__modal-wrapper"></div>
+              <div class="connection__city-bg-modal">
+                <div class="connection__city-modal">
+                  <div class="connection__city-input">
+                    <label for="connection__city-input"> </label>
+                    <input
+                      id="connection__city-input"
+                      type="text"
+                      placeholder="Indică orașul"
+                    />
+                    <img
+                      src="./img/main/close.svg"
+                      alt="close"
+                      class="connection__city-close"
+                    />
+                  </div>
+                  <ul>
+                    <li>Chișinău</li>
+                    <li>Bălți</li>
+                    <li>Cahul</li>
+                    <li>Chișinău</li>
+                    <li>Bălți</li>
+                    <li>Cahul</li>
+                    <li>Chișinău</li>
+                    <li>Bălți</li>
+                    <li>Cahul</li>
+                    <li>Chișinău</li>
+                    <li>Bălți</li>
+                    <li>Cahul</li>
+                  </ul>
                 </div>
-                <div class="connection__auth">
-                    <div class="connection__phone connection-block">
-                        <img src="./img/header/phone.svg" alt="phone" /><span
-                    >+373 69 123 123</span
-                    >
-                    </div>
-                    <div
-                            onclick="showModalLogin()"
-                            class="connection__login connection-block"
-                    >
-                        <img src="img/header/login.svg" alt="login" />
-                        <span>Autentificare sau înregistrare</span>
-                    </div>
-                </div>
+              </div>
             </div>
-
-            <div class="header__menu menu _container">
-                <div class="menu__logo logo">
-                    <a href="index.html">
-                        <img src="./img/header/logo_header.svg" alt="logo"
-                        /></a>
-                </div>
-                <nav class="menu__body">
-                    <ul class="menu__list">
-                        <li>
-                            <a href="buy-page.html" class="menu__link">Cumpărare</a>
-                        </li>
-                        <li>
-                            <a href="rent-page.html" class="menu__link">Închiriere</a>
-                        </li>
-                        <li>
-                            <a href="new-build-page.html" class="menu__link"
-                            >Clădiri noi</a
-                            >
-                        </li>
-                        <li onclick="showModalIpoteca()" class="menu__link">Ipotecă</li>
-                        <li class="menu__link" onclick="showModalService()">
-                            Servicii
-                        </li>
-                        <li>
-                            <a href="partner-page.html" class="menu__link">Parteneri</a>
-                        </li>
-                        <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
-                        <li><a href="blog-page.html" class="menu__link">Blog</a></li>
-                    </ul>
-                </nav>
-                <div class="menu__icon icon-menu" onclick="showBurgerMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div id="modalIpoteca" class="modal__wrapper">
-                    <div class="modal">
-                        <div class="justify align-center">
-                            <h3 class="modal__title title">Ipotecă</h3>
-                            <span onclick="closeModalIpoteca()" class="modal__close"
-                            >&times;</span
-                            >
-                        </div>
-                        <div class="modal__content">
-                            <a href="calculator-page.html">
-                                <div class="service">
-                                    <div class="service__img">
-                                        <img src="./img/main/calc.svg" alt="calc" />
-                                    </div>
-                                    <div class="service__title">Calculator ipotecă</div>
-                                    <div class="service__text">Calculează</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="modalService" class="modal__wrapper">
-                    <div class="modal">
-                        <div class="justify align-center">
-                            <h3 class="modal__title title">Servicii</h3>
-                            <span onclick="closeModalService()" class="modal__close"
-                            >&times;</span
-                            >
-                        </div>
-
-                        <div class="modal__content">
-                            <a href="buy-page.html">
-                                <div class="service">
-                                    <div class="service__img">
-                                        <img src="./img/main/house-circle.svg" alt="home" />
-                                    </div>
-                                    <div class="service__title">Cumpărare și vânzare</div>
-                                    <div class="service__text">123 557 oferte</div>
-                                </div>
-                            </a>
-                            <a href="rent-page.html">
-                                <div class="service">
-                                    <div class="service__img">
-                                        <img src="./img/main/sofa.svg" alt="sofa" />
-                                    </div>
-                                    <div class="service__title">Chirie</div>
-                                    <div class="service__text">50 222 oferte</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <nav id="mySidenav" class="menu__body_burger sidenav">
-                    <span class="closebtn" onclick="closeBurgerMenu()">&times;</span>
-                    <ul class="menu__list_burger">
-                        <li>
-                            <a href="buy-page.html" class="menu__link">Cumpărare</a>
-                        </li>
-                        <li>
-                            <a href="rent-page.html" class="menu__link">Închiriere</a>
-                        </li>
-                        <li>
-                            <a href="new-build-page.html" class="menu__link"
-                            >Clădiri noi</a
-                            >
-                        </li>
-                        <li class="justify" onclick="showBurgerIpoteca()">
-                            <a href="#" class="menu__link">Ipotecă</a>
-                            <img src="./img/header/arrow-green.svg" alt="arrow-green" />
-                        </li>
-                        <li class="justify" onclick="showBurgerService()">
-                            <a href="#" class="menu__link">Servicii</a>
-                            <img src="./img/header/arrow-green.svg" alt="arrow-green" />
-                        </li>
-                        <li>
-                            <a href="partner-page.html" class="menu__link">Parteneri</a>
-                        </li>
-                        <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
-                        <li><a href="blog-page.html" class="menu__link">Blog</a></li>
-                        <div class="connection__login align-center">
-                            <img src="img/header/login.svg" alt="login" />
-                            <span class="ml-20">Autentificare sau înregistrare</span>
-                        </div>
-                    </ul>
-                </nav>
-                <nav id="mySidenavIpoteca" class="menu__body_burger sidenav">
-              <span class="closebtn" onclick="closeBurgerIpoteca()"
-              >&times;</span
-              >
-                    <ul class="menu__list_burger">
-                        <li>
-                            <a href="buy-page.html" class="menu__link">Calculator</a>
-                        </li>
-                    </ul>
-                </nav>
-                <nav id="mySidenavService" class="menu__body_burger sidenav">
-              <span class="closebtn" onclick="closeBurgerService()"
-              >&times;</span
-              >
-                    <ul class="menu__list_burger">
-                        <li>
-                            <a href="buy-page.html" class="menu__link"
-                            >Cumpărare şi vânzare</a
-                            >
-                        </li>
-                        <li>
-                            <a href="rent-page.html" class="menu__link">Chirie</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div id="auth_login" class="auth__wrapper">
-                <div class="auth">
-                    <div class="auth__close">
-                        <span onclick="closeModalLogin()">&times;</span>
-                    </div>
-                    <div class="auth__content">
-                        <div class="auth__title">
-                            <span>Conectați-vă la</span>
-                            <a href="index.html">
-                                <img src="./img/header/logo_header.svg" alt="logo"
-                                /></a>
-                        </div>
-                        <div class="auth__btn bg-green">
-                            <img src="./img/auth/google.svg" alt="google" />Conectați-vă
-                            prin Google
-                        </div>
-                        <div class="auth__btn bg-blue">
-                            <img
-                                    src="./img/auth/facebook.svg"
-                                    alt="facebook"
-                            />Conectați-vă prin Facebook
-                        </div>
-                        <hr />
-                        <div class="auth__input">
-                            <label for="auth_login_input">
-                                <img src="./img/auth/bx_user.svg" alt="user" />
-                            </label>
-                            <input
-                                    placeholder="Nume utilizator sau email"
-                                    id="auth_login_input"
-                                    name="auth_login_input"
-                                    type="text"
-                            />
-                        </div>
-                        <div class="auth__input">
-                            <label for="auth_password">
-                                <img src="./img/auth/password.svg" alt="password" />
-                            </label>
-                            <input
-                                    placeholder="Parola"
-                                    id="auth_password"
-                                    name="auth_password"
-                                    type="text"
-                            />
-                        </div>
-                        <div class="auth__text auth__text-active mb-20">
-                            Ați uitat parola?
-                        </div>
-                        <div class="auth__btn bg-black text-center">Conectați-vă</div>
-                        <div class="auth__text text-center">
-                            Nu aveți un cont?
-                            <span
-                                    onclick="showModalRegistration()"
-                                    class="auth__text-active"
-                            >
-                    Înregistrați-vă!</span
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="auth_registration" class="auth__wrapper">
-                <div class="auth">
-                    <div class="auth__close">
-                        <span onclick="closeModalRegistration()">&times;</span>
-                    </div>
-                    <div class="auth__content">
-                        <div class="auth__title-registration">
-                            <a href="index.html">
-                                <img src="./img/header/logo_header.svg" alt="logo"
-                                /></a>
-                        </div>
-                        <div class="auth__title-registration">
-                            <span>Înregistrare</span>
-                        </div>
-
-                        <div class="auth__btn bg-green">
-                            <img src="./img/auth/google.svg" alt="google" />Conectați-vă
-                            prin Google
-                        </div>
-                        <div class="auth__btn bg-blue">
-                            <img
-                                    src="./img/auth/facebook.svg"
-                                    alt="facebook"
-                            />Conectați-vă prin Facebook
-                        </div>
-                        <hr />
-                        <div class="auth__input">
-                            <label for="auth_registration_email">
-                                <img src="./img/auth/email.svg" alt="email" />
-                            </label>
-                            <input
-                                    placeholder="Email"
-                                    id="auth_registration_email"
-                                    name="auth_registration_email"
-                                    type="text"
-                            />
-                        </div>
-                        <div class="auth__input">
-                            <label for="auth_registration_login">
-                                <img src="./img/auth/bx_user.svg" alt="user" />
-                            </label>
-                            <input
-                                    placeholder="Nume utilizator sau email"
-                                    id="auth_registration_login"
-                                    name="auth_registration_login"
-                                    type="text"
-                            />
-                        </div>
-                        <div class="auth__input">
-                            <label for="auth_registration_password">
-                                <img src="./img/auth/password.svg" alt="password" />
-                            </label>
-                            <input
-                                    placeholder="Parola"
-                                    id="auth_registration_password"
-                                    name="auth_registration_password"
-                                    type="text"
-                            />
-                        </div>
-                        <div class="auth__text mb-20 check-box pl-20">
-                            <input
-                                    type="checkbox"
-                                    name="auth_registration_agree"
-                                    id="auth_registration_agree"
-                            />
-                            <label for="auth_registration_agree">
-                                Sunt de acord cu
-                                <span class="border-bottom"
-                                >termenii de utilizare și politica de
-                      confidențialitate</span
-                                >
-                            </label>
-                        </div>
-                        <div class="auth__btn bg-black text-center">Înregistrare</div>
-                        <div class="auth__text text-center">
-                            Deja aveți un cont?
-                            <span onclick="showModalLogin()" class="auth__text-active">
-                    Conectați-vă!</span
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main class="main add-product">
-        <div class="_container">
-            <form class="advertisement advertisement__form">
-                <h2 class=" title-h2">Completați anunțul</h2>
-                <div class="advertisement__type">
-                    <h3 class="advertisement__title1">Tip ofertă</h3>
-                    <ul class="advertisement__typeList">
-                        <li>
-                            <input type="radio" id="type_sell" name="type_offer" value="sell">
-                            <label for="type_sell">Vând</label>
-                        </li>
-                        <li>
-                            <input type="radio" id="type_buy" name="type_offer" value="buy">
-                            <label for="type_buy">Cumpăr</label>
-                        </li>
-                        <li>
-                            <input type="radio" id="type_rent" name="type_offer" value="rent">
-                            <label for="type_rent">Ofer chirie</label>
-                        </li>
-                    </ul>
-                </div>
-                <div class="advertisement__description">
-                    <h3 class="advertisement__title1">Descriere</h3>
-                    <textarea id="advertisement__description" name="description" placeholder="Scrie aici.......">
-
-                </textarea>
-                </div>
-                <div class="advertisement__price">
-                    <h3 class="advertisement__title1">Preț</h3>
-                    <div class="advertisement__priceContent">
-                        <input type="number" name="price" id="advertisement__price">
-                        <select name="currency" id="currency">
-                            <option value="dollar">$</option>
-                            <option value="euro">€</option>
-                            <option value="MDL">MDL</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="advertisement__features">
-                    <h3 class="advertisement__title1">Caracteristici</h3>
-                    <div class="advertisement__featuresList  ">
-                        <div class="form-select">
-                            <label for="housing_stock">Fond locativ</label><br>
-                            <select name="housing_stock" id="housing_stock">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
-                        <div class="form-select">
-                            <label for="build_number">Numar de camere</label><br>
-                            <select name="build_number" id="build_number">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
-                        <div class="form-select">
-                            <label for="floor">Nivel</label><br>
-                            <select name="floor" id="floor">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
-                        <div class="form-select">
-                            <label for="type_build">Tip clădire</label><br>
-                            <select name="type_build" id="type_build">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
-                        <div class="form-select">
-                            <label for="plan_build">Plan clădire</label><br>
-                            <select name="plan_build" id="plan_build">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
-                        <div class="form-select">
-                            <label for="total_area">Suprafața totală, m2</label><br>
-                            <select name="total_area" id="total_area">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
-                        <div class="form-select">
-                            <label for="living_area">Suprafața locativă, m2</label><br>
-                            <select name="living_area" id="living_area">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
-                        <div class="form-select">
-                            <label for="state_apartment">Stare apartament</label><br>
-                            <select name="state_apartment" id="state_apartment">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="advertisement__other">
-                    <h3 class="advertisement__title1">Altele</h3>
-                    <ul class="advertisement__otherList">
-
-                        <li>
-                            <input type="checkbox" id="other_1" name="other" value="1">
-                            <label for="other_1">Mobilat</label>
-                        </li>
-
-                        <li>
-                            <input type="checkbox" id="other_2" name="other" value="2">
-                            <label for="other_2">Ascensor</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="other_3" name="other" value="3">
-                            <label for="other_3">Balcon</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="other_4" name="other" value="4">
-                            <label for="other_4">Sistem de alarmă</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="other_5" name="other" value="5">
-                            <label for="other_5">Teren de joacă</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="other_6" name="other" value="6">
-                            <label for="other_6">Încălzire autonomă</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="other_1" name="other" value="1">
-                            <label for="other_1">Mobilat</label>
-                        </li>
-
-                        <li>
-                            <input type="checkbox" id="other_2" name="other" value="2">
-                            <label for="other_2">Ascensor</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="other_3" name="other" value="3">
-                            <label for="other_3">Balcon</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="other_4" name="other" value="4">
-                            <label for="other_4">Sistem de alarmă</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="other_5" name="other" value="5">
-                            <label for="other_5">Teren de joacă</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="other_6" name="other" value="6">
-                            <label for="other_6">Încălzire autonomă</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="other_1" name="other" value="1">
-                            <label for="other_1">Mobilat</label>
-                        </li>
-
-                    </ul>
-                </div>
-                <div class="advertisement__address">
-                    <div class="form-select">
-                        <label for="region">Regiune</label><br>
-                        <select name="region" id="region">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </div>
-                    <div class="form-select">
-                        <label for="location">Localitate</label><br>
-                        <select name="location" id="location">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </div>
-                    <div class="form-select">
-                        <label for="sector">Sector</label><br>
-                        <select name="sector" id="sector">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </div>
-                    <div class="form-select">
-                        <label for="street">Strada</label><br>
-                        <select name="street" id="street">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </div>
-
-                </div>
-                <div class="advertisement__photo">
-                    <h3 class="advertisement__title1">Fotografii</h3>
-                    <div class="advertisement__addPhoto">
-                        <label>
-                            <input type="file">
-                        </label>
-                    </div>
-                </div>
-
-                <div class="advertisement__contact">
-                    <h3 class="advertisement__title1">Contact</h3>
-                    <div class="advertisement__contactGrid form-input">
-                        <input type="tel">
-                        <button class="advertisement__btn-add btnRadius" type="button">Adăugați</button>
-                    </div>
-                </div>
-
-                <div class="advertisement__license">
-                    <input type="checkbox" name="license " id="license ">
-                    <label for="license ">Eu am făcut cunoștință cu regulamentul de adăugare a anunțului</label>
-                </div>
-
-                <button class="advertisement__btn btnRadius" type="submit">Adaugă anunț</button>
-
-
-            </form>
-        </div>
-
-    </main>
-
-    <footer class="footer">
-        <div class="footer__content _container">
-            <div class="footer__logo logo">
-                <img src="./img/footer/logo_footer.svg" alt="logo" />
-            </div>
-            <div class="footer__nav nav">
-                <ul class="nav__list">
-                    <li><a href="buy-page.html" class="menu__link">Cumpărare</a></li>
-                    <li><a href="rent-page.html" class="menu__link">Închiriere</a></li>
-                    <li><a href="new-build-page.html" class="menu__link">Clădiri noi</a></li>
-                    <li><a href="" class="menu__link">Ipotecă</a></li>
-                </ul>
-                <ul class="nav__list">
-                    <li><a href="" class="menu__link">Servicii</a></li>
-                    <li><a href="partner-page.html" class="menu__link">Parteneri</a></li>
-                    <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
-                    <li><a href="blog-page.html" class="menu__link">Blog</a></li>
-                </ul>
-            </div>
-            <div class="footer__social social">
-                <div class="social__message">
-                    <a href="" class="social__item"
-                    ><img src="./img/footer/facebook.svg" alt="facebook"
-                    /></a>
-                    <a href="" class="social__item"
-                    ><img src="./img/footer/insta.svg" alt="insta"
-                    /></a>
-                    <a href="" class="social__item"
-                    ><img src="./img/footer/twitter.svg" alt="twitter"
-                    /></a>
-                </div>
-                <div class="social__phone">
-                    <img src="./img/footer/phone.svg" alt="phone" /><span
-                >+373 69 123 123</span
+            <div class="connection__auth">
+              <div class="connection__phone connection-block">
+                <img src="./img/header/phone.svg" alt="phone" /><span
+                  >+373 69 123 123</span
                 >
-                </div>
+              </div>
+              <div
+                onclick="showModalLogin()"
+                class="connection__login connection-block"
+              >
+                <img src="img/header/login.svg" alt="login" />
+                <span>Autentificare sau înregistrare</span>
+              </div>
             </div>
-        </div>
-    </footer>
-</div>
+          </div>
 
-<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="./js/slick.min.js"></script>
-<script src="js/sliders.js"></script>
-<script src="js/script.js"></script>
-</body>
+          <div class="header__menu menu _container">
+            <div class="menu__logo logo">
+              <a href="index.html">
+                <img src="./img/header/logo_header.svg" alt="logo"
+              /></a>
+            </div>
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li>
+                  <a href="buy-page.html" class="menu__link">Cumpărare</a>
+                </li>
+                <li>
+                  <a href="rent-page.html" class="menu__link">Închiriere</a>
+                </li>
+                <li>
+                  <a href="new-build-page.html" class="menu__link"
+                    >Clădiri noi</a
+                  >
+                </li>
+                <li onclick="showModalIpoteca()" class="menu__link">Ipotecă</li>
+                <li class="menu__link" onclick="showModalService()">
+                  Servicii
+                </li>
+                <li>
+                  <a href="partner-page.html" class="menu__link">Parteneri</a>
+                </li>
+                <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
+                <li><a href="blog-page.html" class="menu__link">Blog</a></li>
+              </ul>
+            </nav>
+            <div class="menu__icon icon-menu" onclick="showBurgerMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div id="modalIpoteca" class="modal__wrapper">
+              <div class="modal">
+                <div class="justify align-center">
+                  <h3 class="modal__title title">Ipotecă</h3>
+                  <span onclick="closeModalIpoteca()" class="modal__close"
+                    >&times;</span
+                  >
+                </div>
+                <div class="modal__content">
+                  <a href="calculator-page.html">
+                    <div class="service">
+                      <div class="service__img">
+                        <img src="./img/main/calc.svg" alt="calc" />
+                      </div>
+                      <div class="service__title">Calculator ipotecă</div>
+                      <div class="service__text">Calculează</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="modalService" class="modal__wrapper">
+              <div class="modal">
+                <div class="justify align-center">
+                  <h3 class="modal__title title">Servicii</h3>
+                  <span onclick="closeModalService()" class="modal__close"
+                    >&times;</span
+                  >
+                </div>
+
+                <div class="modal__content">
+                  <a href="buy-page.html">
+                    <div class="service">
+                      <div class="service__img">
+                        <img src="./img/main/house-circle.svg" alt="home" />
+                      </div>
+                      <div class="service__title">Cumpărare și vânzare</div>
+                      <div class="service__text">123 557 oferte</div>
+                    </div>
+                  </a>
+                  <a href="rent-page.html">
+                    <div class="service">
+                      <div class="service__img">
+                        <img src="./img/main/sofa.svg" alt="sofa" />
+                      </div>
+                      <div class="service__title">Chirie</div>
+                      <div class="service__text">50 222 oferte</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <nav id="mySidenav" class="menu__body_burger sidenav">
+              <span class="closebtn" onclick="closeBurgerMenu()">&times;</span>
+              <ul class="menu__list_burger">
+                <li>
+                  <a href="buy-page.html" class="menu__link">Cumpărare</a>
+                </li>
+                <li>
+                  <a href="rent-page.html" class="menu__link">Închiriere</a>
+                </li>
+                <li>
+                  <a href="new-build-page.html" class="menu__link"
+                    >Clădiri noi</a
+                  >
+                </li>
+                <li class="justify" onclick="showBurgerIpoteca()">
+                  <a href="#" class="menu__link">Ipotecă</a>
+                  <img src="./img/header/arrow-green.svg" alt="arrow-green" />
+                </li>
+                <li class="justify" onclick="showBurgerService()">
+                  <a href="#" class="menu__link">Servicii</a>
+                  <img src="./img/header/arrow-green.svg" alt="arrow-green" />
+                </li>
+                <li>
+                  <a href="partner-page.html" class="menu__link">Parteneri</a>
+                </li>
+                <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
+                <li><a href="blog-page.html" class="menu__link">Blog</a></li>
+                <div class="connection__login align-center">
+                  <img src="img/header/login.svg" alt="login" />
+                  <span class="ml-20">Autentificare sau înregistrare</span>
+                </div>
+              </ul>
+            </nav>
+            <nav id="mySidenavIpoteca" class="menu__body_burger sidenav">
+              <span class="closebtn" onclick="closeBurgerIpoteca()"
+                >&times;</span
+              >
+              <ul class="menu__list_burger">
+                <li>
+                  <a href="buy-page.html" class="menu__link">Calculator</a>
+                </li>
+              </ul>
+            </nav>
+            <nav id="mySidenavService" class="menu__body_burger sidenav">
+              <span class="closebtn" onclick="closeBurgerService()"
+                >&times;</span
+              >
+              <ul class="menu__list_burger">
+                <li>
+                  <a href="buy-page.html" class="menu__link"
+                    >Cumpărare şi vânzare</a
+                  >
+                </li>
+                <li>
+                  <a href="rent-page.html" class="menu__link">Chirie</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div id="auth_login" class="auth__wrapper">
+            <div class="auth">
+              <div class="auth__close">
+                <span onclick="closeModalLogin()">&times;</span>
+              </div>
+              <div class="auth__content">
+                <div class="auth__title">
+                  <span>Conectați-vă la</span>
+                  <a href="index.html">
+                    <img src="./img/header/logo_header.svg" alt="logo"
+                  /></a>
+                </div>
+                <div class="auth__btn bg-green">
+                  <img src="./img/auth/google.svg" alt="google" />Conectați-vă
+                  prin Google
+                </div>
+                <div class="auth__btn bg-blue">
+                  <img
+                    src="./img/auth/facebook.svg"
+                    alt="facebook"
+                  />Conectați-vă prin Facebook
+                </div>
+                <hr />
+                <div class="auth__input">
+                  <label for="auth_login_input">
+                    <img src="./img/auth/bx_user.svg" alt="user" />
+                  </label>
+                  <input
+                    placeholder="Nume utilizator sau email"
+                    id="auth_login_input"
+                    name="auth_login_input"
+                    type="text"
+                  />
+                </div>
+                <div class="auth__input">
+                  <label for="auth_password">
+                    <img src="./img/auth/password.svg" alt="password" />
+                  </label>
+                  <input
+                    placeholder="Parola"
+                    id="auth_password"
+                    name="auth_password"
+                    type="text"
+                  />
+                </div>
+                <div class="auth__text auth__text-active mb-20">
+                  Ați uitat parola?
+                </div>
+                <div class="auth__btn bg-black text-center">Conectați-vă</div>
+                <div class="auth__text text-center">
+                  Nu aveți un cont?
+                  <span
+                    onclick="showModalRegistration()"
+                    class="auth__text-active"
+                  >
+                    Înregistrați-vă!</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="auth_registration" class="auth__wrapper">
+            <div class="auth">
+              <div class="auth__close">
+                <span onclick="closeModalRegistration()">&times;</span>
+              </div>
+              <div class="auth__content">
+                <div class="auth__title-registration">
+                  <a href="index.html">
+                    <img src="./img/header/logo_header.svg" alt="logo"
+                  /></a>
+                </div>
+                <div class="auth__title-registration">
+                  <span>Înregistrare</span>
+                </div>
+
+                <div class="auth__btn bg-green">
+                  <img src="./img/auth/google.svg" alt="google" />Conectați-vă
+                  prin Google
+                </div>
+                <div class="auth__btn bg-blue">
+                  <img
+                    src="./img/auth/facebook.svg"
+                    alt="facebook"
+                  />Conectați-vă prin Facebook
+                </div>
+                <hr />
+                <div class="auth__input">
+                  <label for="auth_registration_email">
+                    <img src="./img/auth/email.svg" alt="email" />
+                  </label>
+                  <input
+                    placeholder="Email"
+                    id="auth_registration_email"
+                    name="auth_registration_email"
+                    type="text"
+                  />
+                </div>
+                <div class="auth__input">
+                  <label for="auth_registration_login">
+                    <img src="./img/auth/bx_user.svg" alt="user" />
+                  </label>
+                  <input
+                    placeholder="Nume utilizator sau email"
+                    id="auth_registration_login"
+                    name="auth_registration_login"
+                    type="text"
+                  />
+                </div>
+                <div class="auth__input">
+                  <label for="auth_registration_password">
+                    <img src="./img/auth/password.svg" alt="password" />
+                  </label>
+                  <input
+                    placeholder="Parola"
+                    id="auth_registration_password"
+                    name="auth_registration_password"
+                    type="text"
+                  />
+                </div>
+                <div class="auth__text mb-20 check-box pl-20">
+                  <input
+                    type="checkbox"
+                    name="auth_registration_agree"
+                    id="auth_registration_agree"
+                  />
+                  <label for="auth_registration_agree">
+                    Sunt de acord cu
+                    <span class="border-bottom"
+                      >termenii de utilizare și politica de
+                      confidențialitate</span
+                    >
+                  </label>
+                </div>
+                <div class="auth__btn bg-black text-center">Înregistrare</div>
+                <div class="auth__text text-center">
+                  Deja aveți un cont?
+                  <span onclick="showModalLogin()" class="auth__text-active">
+                    Conectați-vă!</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main add-product">
+        <div class="_container">
+          <form id="add-product-form" class="advertisement advertisement__form">
+            <h2 class="title-h2">Completați anunțul</h2>
+            <div class="advertisement__type">
+              <h3 class="advertisement__title1">Tip ofertă</h3>
+              <ul class="advertisement__typeList">
+                <li>
+                  <input
+                    type="radio"
+                    id="type_sell"
+                    name="type_offer"
+                    value="sell"
+                  />
+                  <label for="type_sell">Vând</label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="type_buy"
+                    name="type_offer"
+                    value="buy"
+                  />
+                  <label for="type_buy">Cumpăr</label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="type_rent"
+                    name="type_offer"
+                    value="rent"
+                  />
+                  <label for="type_rent">Ofer chirie</label>
+                </li>
+              </ul>
+            </div>
+            <div class="advertisement__description">
+              <h3 class="advertisement__title1">Descriere</h3>
+              <textarea
+                id="advertisement__description"
+                name="description"
+                placeholder="Scrie aici......."
+              >
+              </textarea>
+            </div>
+            <div class="advertisement__price">
+              <h3 class="advertisement__title1">Preț</h3>
+              <div class="advertisement__priceContent">
+                <input type="number" name="price" id="advertisement__price" />
+                <select name="currency" id="currency">
+                  <option value="dollar">$</option>
+                  <option value="euro">€</option>
+                  <option value="MDL">MDL</option>
+                </select>
+              </div>
+            </div>
+            <div class="advertisement__features">
+              <h3 class="advertisement__title1">Caracteristici</h3>
+              <div class="advertisement__featuresList">
+                <div class="form-select">
+                  <label for="housing_stock">Fond locativ</label><br />
+                  <select name="housing_stock" id="housing_stock">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <div class="form-select">
+                  <label for="build_number">Numar de camere</label><br />
+                  <select name="build_number" id="build_number">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <div class="form-select">
+                  <label for="floor">Nivel</label><br />
+                  <select name="floor" id="floor">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <div class="form-select">
+                  <label for="type_build">Tip clădire</label><br />
+                  <select name="type_build" id="type_build">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <div class="form-select">
+                  <label for="plan_build">Plan clădire</label><br />
+                  <select name="plan_build" id="plan_build">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <div class="form-select">
+                  <label for="total_area">Suprafața totală, m2</label><br />
+                  <select name="total_area" id="total_area">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <div class="form-select">
+                  <label for="living_area">Suprafața locativă, m2</label><br />
+                  <select name="living_area" id="living_area">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <div class="form-select">
+                  <label for="state_apartment">Stare apartament</label><br />
+                  <select name="state_apartment" id="state_apartment">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="advertisement__other">
+              <h3 class="advertisement__title1">Altele</h3>
+              <ul class="advertisement__otherList">
+                <li>
+                  <input type="checkbox" id="other_1" name="other" value="1" />
+                  <label for="other_1">Mobilat</label>
+                </li>
+
+                <li>
+                  <input type="checkbox" id="other_2" name="other" value="2" />
+                  <label for="other_2">Ascensor</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="other_3" name="other" value="3" />
+                  <label for="other_3">Balcon</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="other_4" name="other" value="4" />
+                  <label for="other_4">Sistem de alarmă</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="other_5" name="other" value="5" />
+                  <label for="other_5">Teren de joacă</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="other_6" name="other" value="6" />
+                  <label for="other_6">Încălzire autonomă</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="other_1" name="other" value="1" />
+                  <label for="other_1">Mobilat</label>
+                </li>
+
+                <li>
+                  <input type="checkbox" id="other_2" name="other" value="2" />
+                  <label for="other_2">Ascensor</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="other_3" name="other" value="3" />
+                  <label for="other_3">Balcon</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="other_4" name="other" value="4" />
+                  <label for="other_4">Sistem de alarmă</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="other_5" name="other" value="5" />
+                  <label for="other_5">Teren de joacă</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="other_6" name="other" value="6" />
+                  <label for="other_6">Încălzire autonomă</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="other_1" name="other" value="1" />
+                  <label for="other_1">Mobilat</label>
+                </li>
+              </ul>
+            </div>
+            <div class="advertisement__address">
+              <div class="form-select">
+                <label for="region">Regiune</label><br />
+                <select name="region" id="region">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="form-select">
+                <label for="location">Localitate</label><br />
+                <select name="location" id="location">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="form-select">
+                <label for="sector">Sector</label><br />
+                <select name="sector" id="sector">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="form-select">
+                <label for="street">Strada</label><br />
+                <select name="street" id="street">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="advertisement__photo">
+              <h3 class="advertisement__title1">Fotografii</h3>
+              <!--              <div class="advertisement__addPhoto">-->
+              <!--                <label>-->
+              <!--                  <input type="file" />-->
+              <!--                </label>-->
+              <!--              </div>-->
+              <div class="advertisement__addPhoto">
+                <label>
+                  <input
+                    type="file"
+                    multiple
+                    id="gallery-photo-add"
+                    name="gallery"
+                    onchange="image_select()"
+                  />
+                </label>
+              </div>
+              <div class="gallery" id="gallery_container">
+<!--                <div class="gallery__item">-->
+<!--                  <span class="gallery__item_close">&times;</span>-->
+<!--                  <img src="./img/main/category.png" alt="" />-->
+<!--                </div>-->
+              </div>
+            </div>
+
+            <div class="advertisement__contact">
+              <h3 class="advertisement__title1">Contact</h3>
+              <div class="advertisement__contactGrid form-input">
+                <input type="tel" />
+                <button class="advertisement__btn-add btnRadius" type="button">
+                  Adăugați
+                </button>
+              </div>
+            </div>
+
+            <div class="advertisement__license">
+              <input type="checkbox" name="license " id="license " />
+              <label for="license "
+                >Eu am făcut cunoștință cu regulamentul de adăugare a
+                anunțului</label
+              >
+            </div>
+
+            <button class="advertisement__btn btnRadius" type="submit">
+              Adaugă anunț
+            </button>
+          </form>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__content _container">
+          <div class="footer__logo logo">
+            <img src="./img/footer/logo_footer.svg" alt="logo" />
+          </div>
+          <div class="footer__nav nav">
+            <ul class="nav__list">
+              <li><a href="buy-page.html" class="menu__link">Cumpărare</a></li>
+              <li>
+                <a href="rent-page.html" class="menu__link">Închiriere</a>
+              </li>
+              <li>
+                <a href="new-build-page.html" class="menu__link">Clădiri noi</a>
+              </li>
+              <li><a href="" class="menu__link">Ipotecă</a></li>
+            </ul>
+            <ul class="nav__list">
+              <li><a href="" class="menu__link">Servicii</a></li>
+              <li>
+                <a href="partner-page.html" class="menu__link">Parteneri</a>
+              </li>
+              <li><a href="news-page.html" class="menu__link">Noutăți</a></li>
+              <li><a href="blog-page.html" class="menu__link">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer__social social">
+            <div class="social__message">
+              <a href="" class="social__item"
+                ><img src="./img/footer/facebook.svg" alt="facebook"
+              /></a>
+              <a href="" class="social__item"
+                ><img src="./img/footer/insta.svg" alt="insta"
+              /></a>
+              <a href="" class="social__item"
+                ><img src="./img/footer/twitter.svg" alt="twitter"
+              /></a>
+            </div>
+            <div class="social__phone">
+              <img src="./img/footer/phone.svg" alt="phone" /><span
+                >+373 69 123 123</span
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script src="./js/slick.min.js"></script>
+    <script src="js/sliders.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/input-file.js"></script>
+  </body>
 </html>

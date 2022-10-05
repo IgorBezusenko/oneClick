@@ -1,7 +1,7 @@
-.add-product{
+.add-product {
   margin: 50px 0;
   @media (max-width: $md3 + px) {
-    margin:  0;
+    margin: 0;
   }
 }
 .advertisement {
@@ -10,7 +10,8 @@
   font-size: 18px;
   line-height: 23px;
 
-  label, select {
+  label,
+  select {
     cursor: pointer;
   }
 
@@ -20,8 +21,8 @@
     margin: 20px 0;
   }
 
-  &__typeList, &__otherList {
-
+  &__typeList,
+  &__otherList {
     li {
       padding: 0 0 0 25px;
     }
@@ -62,11 +63,11 @@
       font-weight: 500;
       font-size: 18px;
       line-height: 23px;
-
     }
   }
 
-  &__featuresList, &__address {
+  &__featuresList,
+  &__address {
     padding: 0 50px;
     display: flex;
     justify-content: space-between;
@@ -82,11 +83,11 @@
     flex-wrap: wrap;
     gap: 8px;
   }
-//&__photo{
-//
-//  //background-color: green;
-//  padding: 100px;
-//}
+  //&__photo{
+  //
+  //  //background-color: green;
+  //  padding: 100px;
+  //}
   &__addPhoto {
     input[type="file"] {
       display: none;
@@ -132,7 +133,6 @@
   }
 
   &__btn-add {
-
     padding: 6px 12px;
     font-size: 18px;
     line-height: 23px;
@@ -144,7 +144,6 @@
   }
 
   &__btn {
-
     padding: 14px 16px;
 
     font-weight: 500;
@@ -152,14 +151,16 @@
     line-height: 31px;
   }
 
-  input[type="radio"], input[type="checkbox"] {
+  input[type="radio"],
+  input[type="checkbox"] {
     width: 0;
     height: 0;
     position: relative;
     cursor: pointer;
   }
 
-  input[type="radio"]:after, input[type="checkbox"]:after {
+  input[type="radio"]:after,
+  input[type="checkbox"]:after {
     background-color: inherit;
     border: 1px solid $border-color;
     border-radius: 5px;
@@ -172,23 +173,22 @@
     height: 15px;
   }
 
-  input[type="radio"]:checked:after, input[type="checkbox"]:checked:after {
+  input[type="radio"]:checked:after,
+  input[type="checkbox"]:checked:after {
     background-color: $green;
     border: none;
   }
-
 
   //
   //@media (max-width: $md1 + px) {
   //
   //}
   @media (max-width: $md2 + px) {
-
-    &__otherList, &__address {
+    &__otherList,
+    &__address {
       padding: 0;
       gap: 15px;
     }
-
   }
   @media (max-width: $md3 + px) {
     padding: 0 0 20px 0;
@@ -197,14 +197,14 @@
       font-weight: 700;
     }
 
-    &__featuresList, &__address {
+    &__featuresList,
+    &__address {
       padding: 0;
       display: block;
     }
     &__address {
       margin-top: 20px;
     }
-
 
     &__otherList {
       padding: 0;
@@ -222,15 +222,14 @@
 
     &__btn {
       width: 100%;
-
     }
-
   }
   @media (max-width: 374px) {
     &__typeList {
       font-size: 15px;
 
-      input[type="radio"]:after, input[type="checkbox"]:after {
+      input[type="radio"]:after,
+      input[type="checkbox"]:after {
         left: -15px;
         top: -14px;
       }
@@ -239,9 +238,31 @@
         padding: 0 0 0 15px;
       }
     }
-
-
   }
+}
 
-
+.gallery {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  &__item {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    &_close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      color: $white;
+      background-color: $black;
+      font-size: 35px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
