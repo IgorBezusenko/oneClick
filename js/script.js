@@ -132,3 +132,14 @@ const closeSearchModal = (modal, wrapper) => {
   document.querySelector("." + wrapper).classList.remove("active");
   overflowAuto();
 };
+
+//Filter burger
+
+const showFilterBurger = (selector) => {
+  document.querySelector("." + selector).classList.add("active");
+  overflowHidden();
+};
+const closeFilterBurger = (selector) => {
+  document.querySelector("." + selector).classList.remove("active");
+  overflowAuto();
+};

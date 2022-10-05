@@ -206,7 +206,12 @@
               >
               <ul class="menu__list_burger">
                 <li>
-                  <a href="buy-page.html" class="menu__link">Servicii</a>
+                  <a href="buy-page.html" class="menu__link"
+                    >Cumpărare şi vânzare</a
+                  >
+                </li>
+                <li>
+                  <a href="rent-page.html" class="menu__link">Chirie</a>
                 </li>
               </ul>
             </nav>
@@ -837,8 +842,398 @@
               </li>
             </ul>
             <button class="search__btn btnRadius">Salvează căutarea</button>
-            <div class="search__filter">
+
+            <div
+              class="search__filter c-pointer"
+              onclick="showFilterBurger('search__burger-nav')"
+            >
               <img src="./img/buy-page/filter.svg" alt="filter" />
+            </div>
+
+            <!--      Filter bugger      -->
+            <div id="searchNavBurger" class="search__burger-nav sidenav">
+              <div class="search__burger-title">
+                Filtre
+                <button
+                  type="submit"
+                  class="color-green c-pointer fs-16 fw-700"
+                  onclick="closeFilterBurger('search__burger-nav')"
+                >
+                  Aplica
+                </button>
+              </div>
+
+              <ul class="search__burger-list">
+                <li
+                  class="search__burger-item"
+                  onclick="showFilterBurger('search__burger-offerType')"
+                >
+                  Tip ofertă
+                </li>
+                <li
+                  class="search__burger-item"
+                  onclick="showFilterBurger('search__burger-typeBuild')"
+                >
+                  Tip locuință
+                </li>
+                <li
+                  class="search__burger-item"
+                  onclick="showFilterBurger('search__burger-roomCount')"
+                >
+                  Numărul de camere
+                </li>
+                <li
+                  class="search__burger-item"
+                  onclick="showFilterBurger('search__burger-price')"
+                >
+                  Preț
+                </li>
+                <li
+                  class="search__burger-item"
+                  onclick="showFilterBurger('search__burger-filter')"
+                >
+                  Filtru
+                </li>
+              </ul>
+
+              <div class="search__burger-offerType sidenav">
+                <div class="search__burger-title">
+                  Tip ofertă
+                  <span
+                    class="color-green c-pointer"
+                    onclick="closeFilterBurger('search__burger-offerType')"
+                    >Aplica</span
+                  >
+                </div>
+                <div class="search-modal__content">
+                  <div class="check-box search-modal__item">
+                    <input
+                      type="checkbox"
+                      id="offerTypeMobile1"
+                      name="offerType1"
+                      value="offerType1"
+                    />
+                    <label for="offerTypeMobile1">Cumpăr</label>
+                  </div>
+                  <div class="check-box search-modal__item">
+                    <input
+                      type="checkbox"
+                      id="offerTypeMobile2"
+                      name="offerType2"
+                      value="offerType2"
+                    />
+                    <label for="offerTypeMobile2">Vând</label>
+                  </div>
+                  <div class="check-box search-modal__item">
+                    <input
+                      type="checkbox"
+                      id="offerTypeMobile3"
+                      name="offerType3"
+                      value="offerType3"
+                    />
+                    <label for="offerTypeMobile3">Închiriez</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="search__burger-typeBuild sidenav">
+                <div class="search__burger-title">
+                  Tip locuință
+                  <span
+                    class="color-green c-pointer"
+                    onclick="closeFilterBurger('search__burger-typeBuild')"
+                    >Aplica</span
+                  >
+                </div>
+                <div class="search-modal__content">
+                  <div class="check-box search-modal__item">
+                    <input
+                      type="checkbox"
+                      id="typeBuildMobile1"
+                      name="typeBuild1"
+                      value="typeBuild1"
+                    />
+                    <label for="typeBuildMobile1">Casă</label>
+                  </div>
+
+                  <div class="check-box search-modal__item">
+                    <input
+                      type="checkbox"
+                      id="typeBuildMobile2"
+                      name="typeBuild2"
+                      value="typeBuild2"
+                    />
+                    <label for="typeBuildMobile2">Apartament</label>
+                  </div>
+                  <div class="check-box search-modal__item">
+                    <input
+                      type="checkbox"
+                      id="typeBuildMobile3"
+                      name="typeBuild3"
+                      value="typeBuild3"
+                    />
+                    <label for="typeBuildMobile3">Cameră</label>
+                  </div>
+                  <div class="check-box search-modal__item">
+                    <input
+                      type="checkbox"
+                      id="typeBuildMobile4"
+                      name="typeBuild4"
+                      value="typeBuild4"
+                    />
+                    <label for="typeBuildMobile4">Townhouse</label>
+                  </div>
+                  <div class="check-box search-modal__item">
+                    <input
+                      type="checkbox"
+                      id="typeBuildMobile5"
+                      name="typeBuild5"
+                      value="typeBuild5"
+                    />
+                    <label for="typeBuildMobile5">Clădiri noi</label>
+                  </div>
+                  <div class="check-box search-modal__item">
+                    <input
+                      type="checkbox"
+                      id="typeBuildMobile6"
+                      name="typeBuild6"
+                      value="typeBuild6"
+                    />
+                    <label for="typeBuildMobile6">Lorem</label>
+                  </div>
+                  <div class="check-box search-modal__item">
+                    <input
+                      type="checkbox"
+                      id="typeBuildMobile7"
+                      name="typeBuild7"
+                      value="typeBuild7"
+                    />
+                    <label for="typeBuildMobile7">Lorem</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="search__burger-roomCount sidenav">
+                <div class="search__burger-title">
+                  Numărul de camere
+                  <span
+                    class="color-green c-pointer"
+                    onclick="closeFilterBurger('search__burger-roomCount')"
+                    >Aplica</span
+                  >
+                </div>
+                <div class="search-modal__content-roomCount">
+                  <div
+                    class="check-box-custom search-modal__checkbox-roomCount"
+                  >
+                    <input
+                      type="checkbox"
+                      id="roomCountMobile1"
+                      name="roomCount1"
+                      value="roomCount1"
+                    />
+                    <label for="roomCountMobile1">1</label>
+                  </div>
+                  <div
+                    class="check-box-custom search-modal__checkbox-roomCount"
+                  >
+                    <input
+                      type="checkbox"
+                      id="roomCountMobile2"
+                      name="roomCount2"
+                      value="roomCount2"
+                    />
+                    <label for="roomCountMobile2">2</label>
+                  </div>
+                  <div
+                    class="check-box-custom search-modal__checkbox-roomCount"
+                  >
+                    <input
+                      type="checkbox"
+                      id="roomCountMobile3"
+                      name="roomCount3"
+                      value="roomCount3"
+                    />
+                    <label for="roomCountMobile3">3</label>
+                  </div>
+                  <div
+                    class="check-box-custom search-modal__checkbox-roomCount"
+                  >
+                    <input
+                      type="checkbox"
+                      id="roomCountMobile4"
+                      name="roomCount4"
+                      value="roomCount4"
+                    />
+                    <label for="roomCount4">4</label>
+                  </div>
+                  <div
+                    class="check-box-custom search-modal__checkbox-roomCount"
+                  >
+                    <input
+                      type="checkbox"
+                      id="roomCountMobile5+"
+                      name="roomCount5+"
+                      value="roomCount5+"
+                    />
+                    <label for="roomCountMobile5+">5+</label>
+                  </div>
+                  <div
+                    class="check-box-custom search-modal__checkbox-roomCount"
+                  >
+                    <input
+                      type="checkbox"
+                      id="roomCountMobile6"
+                      name="roomCount6"
+                      value="roomCount6"
+                    />
+                    <label for="roomCountMobile6">studio</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="search__burger-price sidenav">
+                <div class="search__burger-title">
+                  Preț
+                  <span
+                    class="color-green c-pointer"
+                    onclick="closeFilterBurger('search__burger-price')"
+                    >Aplica</span
+                  >
+                </div>
+                <div class="search-modal__content-price">
+                  <div class="search-modal__input-price">
+                    <input type="text" name="priceFrom" placeholder="de la" />
+                  </div>
+                  <div class="search-modal__input-price">
+                    <input
+                      type="text"
+                      name="priceBefore"
+                      placeholder="până la"
+                    />
+                  </div>
+                </div>
+                <div class="search-modal__content-price">
+                  <div class="radio-custom search-modal__radio-price">
+                    <input
+                      type="radio"
+                      id="priceMobile1"
+                      name="price"
+                      value="price1"
+                    />
+                    <label for="priceMobile1">mdl</label>
+                  </div>
+                  <div class="radio-custom search-modal__radio-price">
+                    <input
+                      type="radio"
+                      id="priceMobile2"
+                      name="price"
+                      value="price2"
+                    />
+                    <label for="priceMobile2">eur</label>
+                  </div>
+                  <div class="radio-custom search-modal__radio-price">
+                    <input
+                      type="radio"
+                      id="priceMobile3"
+                      name="price"
+                      value="price3"
+                    />
+                    <label for="priceMobile3">usd</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="search__burger-filter sidenav">
+                <div class="search__burger-title">
+                  Filtru
+                  <span
+                    class="color-green c-pointer"
+                    onclick="closeFilterBurger('search__burger-filter')"
+                    >Aplica</span
+                  >
+                </div>
+                <div class="search-modal__title">Suprafață totală</div>
+                <div class="search-modal__content-filter">
+                  <div class="search-modal__input-filter">
+                    <input
+                      type="text"
+                      name="filterTotalAriaFrom"
+                      placeholder="de la"
+                    />
+                  </div>
+                  <div class="search-modal__input-filter">
+                    <input
+                      type="text"
+                      name="filterTotalAriaBefore"
+                      placeholder="până la"
+                    />
+                  </div>
+                </div>
+                <div class="search-modal__title">Suprafață bucătarie</div>
+                <div class="search-modal__content-filter">
+                  <div class="search-modal__input-filter">
+                    <input
+                      type="text"
+                      name="filterKitchenAriaFrom"
+                      placeholder="de la"
+                    />
+                  </div>
+                  <div class="search-modal__input-filter">
+                    <input
+                      type="text"
+                      name="filterKitchenAriaBefore"
+                      placeholder="până la"
+                    />
+                  </div>
+                </div>
+
+                <div class="search-modal__content-filter">
+                  <div class="radio-custom search-modal__select-filter">
+                    <div class="form-select">
+                      <label for="select-filter" class="search-modal__title"
+                        >Lorem ipsum</label
+                      ><br />
+                      <select name="select-filter" id="select-filterMobile">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="search-modal__title">Lorem ipsum</div>
+                <div class="search-modal__content-filter">
+                  <div class="radio-custom search-modal__radio-filter">
+                    <input
+                      type="radio"
+                      id="filterLoremMobile1"
+                      name="filterLorem"
+                      value="filterLorem1"
+                    />
+                    <label for="filterLoremMobile1">1</label>
+                  </div>
+                  <div class="radio-custom search-modal__radio-filter">
+                    <input
+                      type="radio"
+                      id="filterLoremMobile2"
+                      name="filterLorem"
+                      value="filterLorem2"
+                    />
+                    <label for="filterLoremMobile2">2</label>
+                  </div>
+                  <div class="radio-custom search-modal__radio-filter">
+                    <input
+                      type="radio"
+                      id="filterLoremMobile3"
+                      name="filterLorem"
+                      value="filterLorem3"
+                    />
+                    <label for="filterLoremMobile3">3</label>
+                  </div>
+                </div>
+              </div>
             </div>
           </form>
 
