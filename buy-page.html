@@ -21,19 +21,20 @@
                 <span>Chișinău</span>
                 <img src="./img/header/vector_down.svg" alt="vector" />
               </div>
+              <div class="connection__city__modal-wrapper"></div>
               <div class="connection__city-bg-modal">
                 <div class="connection__city-modal">
                   <div class="connection__city-input">
                     <label for="connection__city-input"> </label>
                     <input
-                      id="connection__city-input"
-                      type="text"
-                      placeholder="Indică orașul"
+                            id="connection__city-input"
+                            type="text"
+                            placeholder="Indică orașul"
                     />
                     <img
-                      src="./img/main/close.svg"
-                      alt="close"
-                      class="connection__city-close"
+                            src="./img/main/close.svg"
+                            alt="close"
+                            class="connection__city-close"
                     />
                   </div>
                   <ul>
@@ -56,12 +57,12 @@
             <div class="connection__auth">
               <div class="connection__phone connection-block">
                 <img src="./img/header/phone.svg" alt="phone" /><span
-                  >+373 69 123 123</span
-                >
+              >+373 69 123 123</span
+              >
               </div>
               <div
-                onclick="showModalLogin()"
-                class="connection__login connection-block"
+                      onclick="showModalLogin()"
+                      class="connection__login connection-block"
               >
                 <img src="img/header/login.svg" alt="login" />
                 <span>Autentificare sau înregistrare</span>
@@ -73,7 +74,7 @@
             <div class="menu__logo logo">
               <a href="index.html">
                 <img src="./img/header/logo_header.svg" alt="logo"
-              /></a>
+                /></a>
             </div>
             <nav class="menu__body">
               <ul class="menu__list">
@@ -85,7 +86,7 @@
                 </li>
                 <li>
                   <a href="new-build-page.html" class="menu__link"
-                    >Clădiri noi</a
+                  >Clădiri noi</a
                   >
                 </li>
                 <li onclick="showModalIpoteca()" class="menu__link">Ipotecă</li>
@@ -109,7 +110,7 @@
                 <div class="justify align-center">
                   <h3 class="modal__title title">Ipotecă</h3>
                   <span onclick="closeModalIpoteca()" class="modal__close"
-                    >&times;</span
+                  >&times;</span
                   >
                 </div>
                 <div class="modal__content">
@@ -131,7 +132,7 @@
                 <div class="justify align-center">
                   <h3 class="modal__title title">Servicii</h3>
                   <span onclick="closeModalService()" class="modal__close"
-                    >&times;</span
+                  >&times;</span
                   >
                 </div>
 
@@ -168,7 +169,7 @@
                 </li>
                 <li>
                   <a href="new-build-page.html" class="menu__link"
-                    >Clădiri noi</a
+                  >Clădiri noi</a
                   >
                 </li>
                 <li class="justify" onclick="showBurgerIpoteca()">
@@ -192,7 +193,7 @@
             </nav>
             <nav id="mySidenavIpoteca" class="menu__body_burger sidenav">
               <span class="closebtn" onclick="closeBurgerIpoteca()"
-                >&times;</span
+              >&times;</span
               >
               <ul class="menu__list_burger">
                 <li>
@@ -202,12 +203,12 @@
             </nav>
             <nav id="mySidenavService" class="menu__body_burger sidenav">
               <span class="closebtn" onclick="closeBurgerService()"
-                >&times;</span
+              >&times;</span
               >
               <ul class="menu__list_burger">
                 <li>
                   <a href="buy-page.html" class="menu__link"
-                    >Cumpărare şi vânzare</a
+                  >Cumpărare şi vânzare</a
                   >
                 </li>
                 <li>
@@ -226,7 +227,7 @@
                   <span>Conectați-vă la</span>
                   <a href="index.html">
                     <img src="./img/header/logo_header.svg" alt="logo"
-                  /></a>
+                    /></a>
                 </div>
                 <div class="auth__btn bg-green">
                   <img src="./img/auth/google.svg" alt="google" />Conectați-vă
@@ -234,8 +235,8 @@
                 </div>
                 <div class="auth__btn bg-blue">
                   <img
-                    src="./img/auth/facebook.svg"
-                    alt="facebook"
+                          src="./img/auth/facebook.svg"
+                          alt="facebook"
                   />Conectați-vă prin Facebook
                 </div>
                 <hr />
@@ -244,10 +245,10 @@
                     <img src="./img/auth/bx_user.svg" alt="user" />
                   </label>
                   <input
-                    placeholder="Nume utilizator sau email"
-                    id="auth_login_input"
-                    name="auth_login_input"
-                    type="text"
+                          placeholder="Nume utilizator sau email"
+                          id="auth_login_input"
+                          name="auth_login_input"
+                          type="text"
                   />
                 </div>
                 <div class="auth__input">
@@ -255,21 +256,21 @@
                     <img src="./img/auth/password.svg" alt="password" />
                   </label>
                   <input
-                    placeholder="Parola"
-                    id="auth_password"
-                    name="auth_password"
-                    type="text"
+                          placeholder="Parola"
+                          id="auth_password"
+                          name="auth_password"
+                          type="text"
                   />
                 </div>
-                <div class="auth__text color-blue fw-500 mb-20">
+                <div class="auth__text auth__text-active mb-20">
                   Ați uitat parola?
                 </div>
                 <div class="auth__btn bg-black text-center">Conectați-vă</div>
                 <div class="auth__text text-center">
                   Nu aveți un cont?
                   <span
-                    onclick="showModalRegistration()"
-                    class="color-blue fw-500"
+                          onclick="showModalRegistration()"
+                          class="auth__text-active"
                   >
                     Înregistrați-vă!</span
                   >
@@ -286,7 +287,7 @@
                 <div class="auth__title-registration">
                   <a href="index.html">
                     <img src="./img/header/logo_header.svg" alt="logo"
-                  /></a>
+                    /></a>
                 </div>
                 <div class="auth__title-registration">
                   <span>Înregistrare</span>
@@ -298,8 +299,8 @@
                 </div>
                 <div class="auth__btn bg-blue">
                   <img
-                    src="./img/auth/facebook.svg"
-                    alt="facebook"
+                          src="./img/auth/facebook.svg"
+                          alt="facebook"
                   />Conectați-vă prin Facebook
                 </div>
                 <hr />
@@ -308,10 +309,10 @@
                     <img src="./img/auth/email.svg" alt="email" />
                   </label>
                   <input
-                    placeholder="Email"
-                    id="auth_registration_email"
-                    name="auth_registration_email"
-                    type="text"
+                          placeholder="Email"
+                          id="auth_registration_email"
+                          name="auth_registration_email"
+                          type="text"
                   />
                 </div>
                 <div class="auth__input">
@@ -319,10 +320,10 @@
                     <img src="./img/auth/bx_user.svg" alt="user" />
                   </label>
                   <input
-                    placeholder="Nume utilizator sau email"
-                    id="auth_registration_login"
-                    name="auth_registration_login"
-                    type="text"
+                          placeholder="Nume utilizator sau email"
+                          id="auth_registration_login"
+                          name="auth_registration_login"
+                          type="text"
                   />
                 </div>
                 <div class="auth__input">
@@ -330,22 +331,22 @@
                     <img src="./img/auth/password.svg" alt="password" />
                   </label>
                   <input
-                    placeholder="Parola"
-                    id="auth_registration_password"
-                    name="auth_registration_password"
-                    type="text"
+                          placeholder="Parola"
+                          id="auth_registration_password"
+                          name="auth_registration_password"
+                          type="text"
                   />
                 </div>
                 <div class="auth__text mb-20 check-box pl-20">
                   <input
-                    type="checkbox"
-                    name="auth_registration_agree"
-                    id="auth_registration_agree"
+                          type="checkbox"
+                          name="auth_registration_agree"
+                          id="auth_registration_agree"
                   />
                   <label for="auth_registration_agree">
                     Sunt de acord cu
                     <span class="border-bottom"
-                      >termenii de utilizare și politica de
+                    >termenii de utilizare și politica de
                       confidențialitate</span
                     >
                   </label>
@@ -353,7 +354,7 @@
                 <div class="auth__btn bg-black text-center">Înregistrare</div>
                 <div class="auth__text text-center">
                   Deja aveți un cont?
-                  <span onclick="showModalLogin()" class="color-blue fw-500">
+                  <span onclick="showModalLogin()" class="auth__text-active">
                     Conectați-vă!</span
                   >
                 </div>

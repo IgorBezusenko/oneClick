@@ -5,7 +5,8 @@ const connection__city_modalShow = document.querySelector(
 const connection__city_bg_modal = document.querySelector(
   ".connection__city-bg-modal"
 );
-const connection__city__modalwrapper = document.querySelector(
+
+const connection__city__modal_wrapper = document.querySelector(
   ".connection__city__modal-wrapper"
 );
 const burger = document.querySelector(".icon-menu");
@@ -26,7 +27,7 @@ const overflowAuto = () => (document.body.style.overflow = "auto");
 const modalCityShow = () => {
   connection__city.classList.add("active");
   connection__city_bg_modal.classList.add("active");
-  connection__city__modalwrapper.classList.add("active");
+  connection__city__modal_wrapper.classList.add("active");
   overflowHidden();
 };
 const checkMenuCase = (element) => {
@@ -43,7 +44,7 @@ const checkMenuCase = (element) => {
     default: {
       connection__city.classList.remove("active");
       connection__city_bg_modal.classList.remove("active");
-      connection__city__modalwrapper.classList.remove("active");
+      connection__city__modal_wrapper.classList.remove("active");
       overflowAuto();
       break;
     }
@@ -55,6 +56,7 @@ const modalCityClose = (e) => {
 
 connection__city_modalShow.addEventListener("click", modalCityShow);
 connection__city_bg_modal.addEventListener("click", modalCityClose);
+connection__city__modal_wrapper.addEventListener("click", modalCityClose);
 
 const showBurgerMenu = () => {
   burger.classList.add("active");
