@@ -19,7 +19,7 @@ function image_show() {
      <div class="gallery__item">
                   <span class="gallery__item_close" onclick="image_delete(${images.indexOf(
                     i
-                  )})">&times;</span>
+                  )})"><img src="./img/add-product/plus-green.svg" alt="plus"></span>
                   <img src="${i.url}" alt="image" />
                 </div>
     `;
