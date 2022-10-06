@@ -42,12 +42,13 @@ $fontFamily: "DM Sans", sans-serif;
 
 .wrapper {
   display: flex;
-  height: 100%;
+
+  min-height: 100%;
   flex-direction: column;
 }
 
 .main {
-  flex-grow: 1;
+  flex: 1 1 auto;
 }
 
 ._container {
